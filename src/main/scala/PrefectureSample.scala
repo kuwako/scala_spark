@@ -17,7 +17,7 @@ object PrefectureSample {
     val sc = new SparkContext(conf)
     val inputRDD = sc.textFile("data/KEN_All_ROME.CSV")
 
-    //mapの例
+    //map 1行ずつ処理させる
     val addresses = inputRDD.map{line =>
       val splited = line.replace("\"", "").split(",")
 
@@ -32,7 +32,7 @@ object PrefectureSample {
 
     printRDD("mappedRDD", addresses)
 
-    //filterとunionの例
+    //filterとunion
     val filtered1 = addresses.filter(line => line.contains("OSAKA")).filter(line => line.contains("AOBADAI"))
     val filtered2 = addresses.filter(line => line.contains("KANAGAWA")).filter(line => line.contains("WAKABADAI"))
     val unioned = filtered1.union(filtered2)
@@ -41,16 +41,16 @@ object PrefectureSample {
     printRDD("filtered RDD 2", filtered2)
     printRDD("unioned RDD", unioned)
 
-    //flatMapの例
+    //flatMap
     val flatmapped = unioned.flatMap(line => line.split(" "))
     printRDD("flatmapped", flatmapped)
 
-    //reduceの例
+    //reduce
     val reduced = flatmapped.reduce((x, y) => x + " " + y)
     println("reduced")
     println(reduced)
 
-    //countの例
+    //count
     val count = inputRDD.count
     println("count")
     println(count)
