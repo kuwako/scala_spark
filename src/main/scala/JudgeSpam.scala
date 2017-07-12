@@ -14,8 +14,11 @@ object JudgeSpam{
 
     // Load 2 types of emails from text files: spam and ham (non-spam).
     // Each line has text from one email.
+    // TODO 教科書データ作成
     val spam = sc.textFile("data/spam.txt")
     val ham = sc.textFile("data/ham.txt")
+
+    // TODO kuromoji or mecabで形態素解析させる必要あり
 
     // Create a HashingTF instance to map email text to vectors of 100 features.
     val tf = new HashingTF(numFeatures = 100)
