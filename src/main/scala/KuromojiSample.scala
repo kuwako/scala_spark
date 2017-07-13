@@ -1,16 +1,16 @@
 /**
   * Created by m_kuwako on 2017/07/13.
   */
-import org.atilika.kuromoji.Tokenizer
-import org.atilika.kuromoji.Token
+import com.atilika.kuromoji.ipadic.{Token,Tokenizer}
 
-object KuromojiSample {
-  val tokenizer = Tokenizer.builder.mode(Tokenizer.Mode.NORMAL).build
+object KuromojiSample extends App {
+  val builder = new Tokenizer.Builder()
+  val tokenizer = builder.build()
 
-  val tokens = tokenizer.tokenize("むかしむかしおじいいさんとおばあさんが居ました。おじいさんは山に芝刈りに、おばあさんは川に洗濯に行きました。").toArray
+  val tokens = tokenizer.tokenize("むかしむかしおじいさんとおばあさんが居ました。おじいさんは山に芝刈りに、おばあさんは川に洗濯に行きました。").toArray
 
   tokens.foreach { t =>
     val token = t.asInstanceOf[Token]
-    println(s"${token.getSurfaceForm} - ${token.getAllFeatures}")
+    println(s"${token.getSurface} - ${token.getAllFeatures}")
   }
 }
