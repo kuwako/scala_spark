@@ -14,9 +14,10 @@ object ConcatFiles {
 
     // TODO 連結
     val buffer = inputRDD.flatMap(line => line.split(" "))
-    printRDD("flatmap", buffer)
 
     // TODO 保存
+    // TODO 保存なんか失敗してる
+//    buffer.saveAsObjectFile("data/output2.txt")
   }
 
   def printRDD(filterName: String, rdd: org.apache.spark.rdd.RDD[_]) = {
