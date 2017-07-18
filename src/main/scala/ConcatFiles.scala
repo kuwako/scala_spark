@@ -9,13 +9,12 @@ object ConcatFiles {
   def main(args: Array[String]) :Unit = {
     val conf = new SparkConf().setAppName("ConcatFiles").setMaster("local[*]")
     val sc = new SparkContext(conf)
-    // TODO 全ファイルの読み出し
+    // 全ファイルの読み出し
     val inputRDD = sc.textFile("src/resources/livedoor/*/*.txt")
 
-    // TODO 連結
+    // 連結
     val buffer = inputRDD.flatMap(line => line.split(" "))
 
-    // TODO 保存
     // TODO 保存なんか失敗してる
 //    buffer.saveAsObjectFile("data/output2.txt")
   }

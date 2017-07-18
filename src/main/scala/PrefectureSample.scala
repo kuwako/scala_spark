@@ -50,7 +50,7 @@ object PrefectureSample {
     println("reduced")
     println(reduced)
 
-    //count
+   //count
     val count = inputRDD.count
     println("count")
     println(count)
