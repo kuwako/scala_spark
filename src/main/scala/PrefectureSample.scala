@@ -16,6 +16,13 @@ object PrefectureSample {
     val conf = new SparkConf().setAppName("RddSample").setMaster("local[*]")
     val sc = new SparkContext(conf)
     val inputRDD = sc.textFile("data/KEN_All_ROME.CSV")
+    val pairs = inputRDD.map(s => (s, 1))
+    val counts = pairs.reduceByKey((a, b) => a + b)
+    val sample = pairs.map(p => {
+        val add = p._2 + 2
+        add * 2
+    })
+    val sam2 = sample
 
     //map 1行ずつ処理させる
     val addresses = inputRDD.map{line =>
