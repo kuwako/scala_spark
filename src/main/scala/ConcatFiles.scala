@@ -4,7 +4,8 @@
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkContext._
 import org.apache.spark.SparkConf
-import java.io.File
+import java.io.{File, PrintWriter}
+
 import scala.sys.process._
 
 object ConcatFiles {
@@ -15,13 +16,16 @@ object ConcatFiles {
     val inputRDD = sc.textFile("src/resources/livedoor/*/*.txt")
     var buffer: String = ""
 
-    val file = new File("data/output3.txt")
     // 連結と保存
-    inputRDD.foreach(rdd =>
+    inputRDD.foreach(rdd => {
       buffer = buffer + rdd
-    )
-    "echo %s".format(buffer) #>> file!
-    
+      println(buffer)
+    })
+
+    val pw = new PrintWriter("data/output.txt")
+    pw.write(buffer)
+    pw.close
+
     sc.stop()
   }
 
