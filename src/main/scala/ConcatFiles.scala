@@ -13,7 +13,7 @@ object ConcatFiles {
     val conf = new SparkConf().setAppName("ConcatFiles").setMaster("local[*]")
     val sc = new SparkContext(conf)
     // 全ファイルの読み出し
-    val inputRDD = sc.textFile("src/resources/livedoor/*/*.txt")
+    val inputRDD = sc.wholeTextFiles("src/resources/livedoor/*/")
     var buffer: String = ""
 
     // 連結と保存
