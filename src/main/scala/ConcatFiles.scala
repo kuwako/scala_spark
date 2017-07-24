@@ -5,6 +5,7 @@ import org.apache.spark.SparkContext
 import org.apache.spark.SparkContext._
 import org.apache.spark.SparkConf
 import java.io.{File, PrintWriter}
+import java.io.{ FileOutputStream=>FileStream, OutputStreamWriter=>StreamWriter };
 
 import scala.sys.process._
 
@@ -14,7 +15,14 @@ object ConcatFiles {
     val sc = new SparkContext(conf)
     // 全ファイルの読み出し
     val inputRDD = sc.wholeTextFiles("src/resources/livedoor/*/")
+    val encode = "UTF-8"
     var buffer: String = ""
+    val fileName = "data/output.txt"
+    val append = true
+
+    // 書き込み処理
+    val fileOutPutStream = new FileStream(fileName, append)
+    val writer = new StreamWriter( fileOutPutStream, encode )
 
     // 連結と保存
     inputRDD.foreach(rdd => {
@@ -22,9 +30,8 @@ object ConcatFiles {
       println(buffer)
     })
 
-    val pw = new PrintWriter("data/output.txt")
-    pw.write(buffer)
-    pw.close
+    writer.write(buffer)
+    writer.close
 
     sc.stop()
   }
