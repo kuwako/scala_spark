@@ -26,7 +26,7 @@ object ConcatFiles {
 
     // 連結と保存
     inputRDD.foreach(rdd => {
-      buffer = buffer + rdd
+      buffer = buffer + rdd._1 + ": " + rdd._2
       println(buffer)
     })
 
