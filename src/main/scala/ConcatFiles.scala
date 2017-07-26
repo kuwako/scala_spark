@@ -22,14 +22,12 @@ object ConcatFiles {
 
     // 書き込み処理
     val fileOutPutStream = new FileStream(fileName, append)
-    val writer = new StreamWriter( fileOutPutStream, encode )
+    val writer = new StreamWriter(fileOutPutStream, encode )
 
     // 連結と保存
-    inputRDD.foreach(rdd => {
-      buffer = buffer + rdd._1 + ": " + rdd._2
-      println(buffer)
-    })
+    writer.write(inputRDD.reduce(x => x._1 + x._2).toString)
 
+    println(buffer)
     writer.write(buffer)
     writer.close
 
