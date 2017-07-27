@@ -5,30 +5,33 @@ import org.apache.spark.SparkContext
 import org.apache.spark.SparkContext._
 import org.apache.spark.SparkConf
 import java.io.{File, PrintWriter}
-import java.io.{ FileOutputStream=>FileStream, OutputStreamWriter=>StreamWriter };
+import java.io.{FileOutputStream => FileStream, OutputStreamWriter => StreamWriter}
+
+import org.apache.spark.rdd.RDD
 
 import scala.sys.process._
 
 object ConcatFiles {
+
+
   def main(args: Array[String]) :Unit = {
+    val fileName = "data/output.txt"
+    val append = true
+    val encode = "UTF-8"
+    val fileOutPutStream = new FileStream(fileName, append)
+    val writer = new StreamWriter(fileOutPutStream, encode )
+
     val conf = new SparkConf().setAppName("ConcatFiles").setMaster("local[*]")
     val sc = new SparkContext(conf)
     // 全ファイルの読み出し
     val inputRDD = sc.wholeTextFiles("src/resources/livedoor/*/")
-    val encode = "UTF-8"
     var buffer: String = ""
-    val fileName = "data/output.txt"
-    val append = true
-
-    // 書き込み処理
-    val fileOutPutStream = new FileStream(fileName, append)
-    val writer = new StreamWriter(fileOutPutStream, encode )
 
     // 連結と保存
-    writer.write(inputRDD.reduce(x => x._1 + x._2).toString)
+    val reduced = inputRDD.flatMap(line => line._2.split(" ")).reduce((x, y) => x + " " + y)
 
-    println(buffer)
-    writer.write(buffer)
+    println("hello")
+    writer.write(reduced)
     writer.close
 
     sc.stop()
