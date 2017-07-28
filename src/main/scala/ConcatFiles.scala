@@ -23,14 +23,16 @@ object ConcatFiles {
 
     val conf = new SparkConf().setAppName("ConcatFiles").setMaster("local[*]")
     val sc = new SparkContext(conf)
+    println("read files")
     // 全ファイルの読み出し
-    val inputRDD = sc.wholeTextFiles("src/resources/livedoor/*/")
-    var buffer: String = ""
+    // TODO 先頭のdokujo-tsushinフォルダしか掘ってない
+    val inputRDD = sc.wholeTextFiles("src/resources/livedoor/*")
 
+    println("map start")
     // 連結と保存
     val reduced = inputRDD.flatMap(line => line._2.split(" ")).reduce((x, y) => x + " " + y)
+    println("map end")
 
-    println("hello")
     writer.write(reduced)
     writer.close
 
