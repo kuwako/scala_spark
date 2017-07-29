@@ -25,7 +25,6 @@ object ConcatFiles {
     val sc = new SparkContext(conf)
     println("read files")
     // 全ファイルの読み出し
-    // TODO 先頭のdokujo-tsushinフォルダしか掘ってない
     val inputRDD = sc.wholeTextFiles("src/resources/livedoor/*")
 
     println("map start")
