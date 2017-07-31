@@ -28,8 +28,12 @@ object Main {
       output.toString() // return
     }).map(line => line.split(" ").toSeq)
 
-    val Word2Vec = new Word2Vec()
-    val model = Word2Vec.fit(input)
-    for((synonym, cosineSimilarity) <- model.findSynonyms("mac", 40)) { println(s"$synonym $cosineSimilarity") }
+    input.foreach(node =>
+      println(node(0))
+    )
+
+//    val Word2Vec = new Word2Vec()
+//    val model = Word2Vec.fit(input)
+//    for((synonym, cosineSimilarity) <- model.findSynonyms("mac", 40)) { println(s"$synonym $cosineSimilarity") }
   }
 }
