@@ -28,12 +28,10 @@ object Main {
       output.toString() // return
     }).map(line => line.split(" ").toSeq)
 
-    input.foreach(node =>
-      println(node(0))
-    )
+//    input.foreach((node) => (node.foreach(aaa => {println(aaa)})))
 
-//    val Word2Vec = new Word2Vec()
-//    val model = Word2Vec.fit(input)
-//    for((synonym, cosineSimilarity) <- model.findSynonyms("mac", 40)) { println(s"$synonym $cosineSimilarity") }
+    val Word2Vec = new Word2Vec()
+    val model = Word2Vec.fit(input)
+    for((synonym, cosineSimilarity) <- model.findSynonyms("mac", 40)) { println(s"$synonym $cosineSimilarity") }
   }
 }
