@@ -9,7 +9,7 @@ import com.atilika.kuromoji.ipadic.{Token,Tokenizer}
   */
 object Main {
   def main(args: Array[String]) {
-    val conf = new SparkConf().setAppName("Judge Spam").setMaster("local[*]")
+    val conf = new SparkConf().setAppName("word2vec prac").setMaster("local[*]")
     val sc = new SparkContext(conf)
 
     val inputRdd = sc.textFile("data/output.txt")
@@ -28,10 +28,12 @@ object Main {
       output.toString() // return
     }).map(line => line.split(" ").toSeq)
 
-//    input.foreach((node) => (node.foreach(aaa => {println(aaa)})))
-
+    println("mapping end")
     val Word2Vec = new Word2Vec()
+    println("fitting start")
+    // TODO fittingに時間がかかりすぎて居るので、実行時にメモリを設定 or 読み込むデータ量を減らす
     val model = Word2Vec.fit(input)
+    println("fitting end")
     for((synonym, cosineSimilarity) <- model.findSynonyms("mac", 40)) { println(s"$synonym $cosineSimilarity") }
   }
 }
