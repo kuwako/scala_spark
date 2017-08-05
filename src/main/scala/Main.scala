@@ -39,6 +39,7 @@ object Main {
 //    val Word2Vec = new Word2Vec()
     println("fitting start")
     // TODO fittingに時間がかかりすぎて居るので、実行時にメモリを設定 or 読み込むデータ量を減らす
+    // TODO 5分割してもprintlnのforeach実行完了までに10時間半かかったので何かがおかしい
 //    val model = Word2Vec.fit(input)
     println("fitting end")
 //    for((synonym, cosineSimilarity) <- model.findSynonyms("mac", 40)) { println(s"$synonym $cosineSimilarity") }

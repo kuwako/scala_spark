@@ -1,0 +1,139 @@
+/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/bin/java "-javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=58663:/Applications/IntelliJ IDEA CE.app/Contents/bin" -Dfile.encoding=UTF-8 -classpath /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/jaccess.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/jfxswt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/lib/packager.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/lib/tools.jar:/Users/m_kuwako/IdeaProjects/scala_spark/target/scala-2.11/classes:/Users/m_kuwako/.ivy2/cache/aopalliance/aopalliance/jars/aopalliance-1.0.jar:/Users/m_kuwako/.ivy2/cache/org.spire-math/spire_2.11/jars/spire_2.11-0.7.4.jar:/Users/m_kuwako/.ivy2/cache/org.spire-math/spire-macros_2.11/jars/spire-macros_2.11-0.7.4.jar:/Users/m_kuwako/.ivy2/cache/org.scalanlp/breeze_2.11/jars/breeze_2.11-0.12.jar:/Users/m_kuwako/.ivy2/cache/org.scalanlp/breeze-macros_2.11/jars/breeze-macros_2.11-0.12.jar:/Users/m_kuwako/.ivy2/cache/org.jpmml/pmml-schema/jars/pmml-schema-1.2.15.jar:/Users/m_kuwako/.ivy2/cache/org.jpmml/pmml-model/jars/pmml-model-1.2.15.jar:/Users/m_kuwako/.ivy2/cache/org.codehaus.janino/janino/jars/janino-3.0.0.jar:/Users/m_kuwako/.ivy2/cache/org.codehaus.janino/commons-compiler/jars/commons-compiler-3.0.0.jar:/Users/m_kuwako/.ivy2/cache/org.apache.spark/spark-streaming_2.11/jars/spark-streaming_2.11-2.1.1.jar:/Users/m_kuwako/.ivy2/cache/org.apache.spark/spark-sql_2.11/jars/spark-sql_2.11-2.1.1.jar:/Users/m_kuwako/.ivy2/cache/org.apache.spark/spark-sketch_2.11/jars/spark-sketch_2.11-2.1.1.jar:/Users/m_kuwako/.ivy2/cache/org.apache.spark/spark-mllib_2.11/jars/spark-mllib_2.11-2.1.1.jar:/Users/m_kuwako/.ivy2/cache/org.apache.spark/spark-mllib-local_2.11/jars/spark-mllib-local_2.11-2.1.1.jar:/Users/m_kuwako/.ivy2/cache/org.apache.spark/spark-graphx_2.11/jars/spark-graphx_2.11-2.1.1.jar:/Users/m_kuwako/.ivy2/cache/org.apache.spark/spark-catalyst_2.11/jars/spark-catalyst_2.11-2.1.1.jar:/Users/m_kuwako/.ivy2/cache/org.apache.parquet/parquet-jackson/jars/parquet-jackson-1.8.1.jar:/Users/m_kuwako/.ivy2/cache/org.apache.parquet/parquet-hadoop/jars/parquet-hadoop-1.8.1.jar:/Users/m_kuwako/.ivy2/cache/org.apache.parquet/parquet-format/jars/parquet-format-2.3.0-incubating.jar:/Users/m_kuwako/.ivy2/cache/org.apache.parquet/parquet-encoding/jars/parquet-encoding-1.8.1.jar:/Users/m_kuwako/.ivy2/cache/org.apache.parquet/parquet-common/jars/parquet-common-1.8.1.jar:/Users/m_kuwako/.ivy2/cache/org.apache.parquet/parquet-column/jars/parquet-column-1.8.1.jar:/Users/m_kuwako/.ivy2/cache/org.antlr/antlr4-runtime/jars/antlr4-runtime-4.5.3.jar:/Users/m_kuwako/.ivy2/cache/net.sourceforge.f2j/arpack_combined_all/jars/arpack_combined_all-0.1.jar:/Users/m_kuwako/.ivy2/cache/net.sf.opencsv/opencsv/jars/opencsv-2.3.jar:/Users/m_kuwako/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.10.jar:/Users/m_kuwako/.ivy2/cache/com.univocity/univocity-parsers/jars/univocity-parsers-2.2.1.jar:/Users/m_kuwako/.ivy2/cache/com.github.rwl/jtransforms/jars/jtransforms-2.4.0.jar:/Users/m_kuwako/.ivy2/cache/com.github.fommil.netlib/core/jars/core-1.1.2.jar:/Users/m_kuwako/.ivy2/cache/com.chuusai/shapeless_2.11/bundles/shapeless_2.11-2.0.0.jar:/Users/m_kuwako/.ivy2/cache/xmlenc/xmlenc/jars/xmlenc-0.52.jar:/Users/m_kuwako/.ivy2/cache/oro/oro/jars/oro-2.0.8.jar:/Users/m_kuwako/.ivy2/cache/org.xerial.snappy/snappy-java/bundles/snappy-java-1.1.2.6.jar:/Users/m_kuwako/.ivy2/cache/org.tukaani/xz/jars/xz-1.0.jar:/Users/m_kuwako/.ivy2/cache/org.spark-project.spark/unused/jars/unused-1.0.0.jar:/Users/m_kuwako/.ivy2/cache/org.sonatype.sisu.inject/cglib/jars/cglib-2.2.1-v20090111.jar:/Users/m_kuwako/.ivy2/cache/org.slf4j/slf4j-log4j12/jars/slf4j-log4j12-1.7.16.jar:/Users/m_kuwako/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.16.jar:/Users/m_kuwako/.ivy2/cache/org.slf4j/jul-to-slf4j/jars/jul-to-slf4j-1.7.16.jar:/Users/m_kuwako/.ivy2/cache/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.16.jar:/Users/m_kuwako/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.4.jar:/Users/m_kuwako/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar:/Users/m_kuwako/.ivy2/cache/org.scala-lang/scalap/jars/scalap-2.11.7.jar:/Users/m_kuwako/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.7.jar:/Users/m_kuwako/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar:/Users/m_kuwako/.ivy2/cache/org.scala-lang/scala-compiler/jars/scala-compiler-2.11.7.jar:/Users/m_kuwako/.ivy2/cache/org.roaringbitmap/RoaringBitmap/bundles/RoaringBitmap-0.5.11.jar:/Users/m_kuwako/.ivy2/cache/org.objenesis/objenesis/jars/objenesis-2.1.jar:/Users/m_kuwako/.ivy2/cache/org.mortbay.jetty/jetty-util/jars/jetty-util-6.1.26.jar:/Users/m_kuwako/.ivy2/cache/org.json4s/json4s-jackson_2.11/jars/json4s-jackson_2.11-3.2.11.jar:/Users/m_kuwako/.ivy2/cache/org.json4s/json4s-core_2.11/jars/json4s-core_2.11-3.2.11.jar:/Users/m_kuwako/.ivy2/cache/org.json4s/json4s-ast_2.11/jars/json4s-ast_2.11-3.2.11.jar:/Users/m_kuwako/.ivy2/cache/org.javassist/javassist/bundles/javassist-3.18.1-GA.jar:/Users/m_kuwako/.ivy2/cache/org.glassfish.jersey.media/jersey-media-jaxb/jars/jersey-media-jaxb-2.22.2.jar:/Users/m_kuwako/.ivy2/cache/org.glassfish.jersey.core/jersey-server/jars/jersey-server-2.22.2.jar:/Users/m_kuwako/.ivy2/cache/org.glassfish.jersey.core/jersey-common/jars/jersey-common-2.22.2.jar:/Users/m_kuwako/.ivy2/cache/org.glassfish.jersey.core/jersey-client/jars/jersey-client-2.22.2.jar:/Users/m_kuwako/.ivy2/cache/org.glassfish.jersey.containers/jersey-container-servlet-core/jars/jersey-container-servlet-core-2.22.2.jar:/Users/m_kuwako/.ivy2/cache/org.glassfish.jersey.containers/jersey-container-servlet/jars/jersey-container-servlet-2.22.2.jar:/Users/m_kuwako/.ivy2/cache/org.glassfish.jersey.bundles.repackaged/jersey-guava/bundles/jersey-guava-2.22.2.jar:/Users/m_kuwako/.ivy2/cache/org.glassfish.hk2.external/javax.inject/jars/javax.inject-2.4.0-b34.jar:/Users/m_kuwako/.ivy2/cache/org.glassfish.hk2.external/aopalliance-repackaged/jars/aopalliance-repackaged-2.4.0-b34.jar:/Users/m_kuwako/.ivy2/cache/org.glassfish.hk2/osgi-resource-locator/jars/osgi-resource-locator-1.0.1.jar:/Users/m_kuwako/.ivy2/cache/org.glassfish.hk2/hk2-utils/jars/hk2-utils-2.4.0-b34.jar:/Users/m_kuwako/.ivy2/cache/org.glassfish.hk2/hk2-locator/jars/hk2-locator-2.4.0-b34.jar:/Users/m_kuwako/.ivy2/cache/org.glassfish.hk2/hk2-api/jars/hk2-api-2.4.0-b34.jar:/Users/m_kuwako/.ivy2/cache/org.fusesource.leveldbjni/leveldbjni-all/bundles/leveldbjni-all-1.8.jar:/Users/m_kuwako/.ivy2/cache/org.codehaus.jackson/jackson-mapper-asl/jars/jackson-mapper-asl-1.9.13.jar:/Users/m_kuwako/.ivy2/cache/org.codehaus.jackson/jackson-core-asl/jars/jackson-core-asl-1.9.13.jar:/Users/m_kuwako/.ivy2/cache/org.apache.zookeeper/zookeeper/jars/zookeeper-3.4.5.jar:/Users/m_kuwako/.ivy2/cache/org.apache.xbean/xbean-asm5-shaded/bundles/xbean-asm5-shaded-4.4.jar:/Users/m_kuwako/.ivy2/cache/org.apache.spark/spark-unsafe_2.11/jars/spark-unsafe_2.11-2.1.1.jar:/Users/m_kuwako/.ivy2/cache/org.apache.spark/spark-tags_2.11/jars/spark-tags_2.11-2.1.1.jar:/Users/m_kuwako/.ivy2/cache/org.apache.spark/spark-network-shuffle_2.11/jars/spark-network-shuffle_2.11-2.1.1.jar:/Users/m_kuwako/.ivy2/cache/org.apache.spark/spark-network-common_2.11/jars/spark-network-common_2.11-2.1.1.jar:/Users/m_kuwako/.ivy2/cache/org.apache.spark/spark-launcher_2.11/jars/spark-launcher_2.11-2.1.1.jar:/Users/m_kuwako/.ivy2/cache/org.apache.spark/spark-core_2.11/jars/spark-core_2.11-2.1.1.jar:/Users/m_kuwako/.ivy2/cache/org.apache.ivy/ivy/jars/ivy-2.4.0.jar:/Users/m_kuwako/.ivy2/cache/org.apache.hadoop/hadoop-yarn-server-common/jars/hadoop-yarn-server-common-2.2.0.jar:/Users/m_kuwako/.ivy2/cache/org.apache.hadoop/hadoop-yarn-common/jars/hadoop-yarn-common-2.2.0.jar:/Users/m_kuwako/.ivy2/cache/org.apache.hadoop/hadoop-yarn-client/jars/hadoop-yarn-client-2.2.0.jar:/Users/m_kuwako/.ivy2/cache/org.apache.hadoop/hadoop-yarn-api/jars/hadoop-yarn-api-2.2.0.jar:/Users/m_kuwako/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-shuffle/jars/hadoop-mapreduce-client-shuffle-2.2.0.jar:/Users/m_kuwako/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-jobclient/jars/hadoop-mapreduce-client-jobclient-2.2.0.jar:/Users/m_kuwako/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-core/jars/hadoop-mapreduce-client-core-2.2.0.jar:/Users/m_kuwako/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-common/jars/hadoop-mapreduce-client-common-2.2.0.jar:/Users/m_kuwako/.ivy2/cache/org.apache.hadoop/hadoop-mapreduce-client-app/jars/hadoop-mapreduce-client-app-2.2.0.jar:/Users/m_kuwako/.ivy2/cache/org.apache.hadoop/hadoop-hdfs/jars/hadoop-hdfs-2.2.0.jar:/Users/m_kuwako/.ivy2/cache/org.apache.hadoop/hadoop-common/jars/hadoop-common-2.2.0.jar:/Users/m_kuwako/.ivy2/cache/org.apache.hadoop/hadoop-client/jars/hadoop-client-2.2.0.jar:/Users/m_kuwako/.ivy2/cache/org.apache.hadoop/hadoop-auth/jars/hadoop-auth-2.2.0.jar:/Users/m_kuwako/.ivy2/cache/org.apache.hadoop/hadoop-annotations/jars/hadoop-annotations-2.2.0.jar:/Users/m_kuwako/.ivy2/cache/org.apache.curator/curator-recipes/bundles/curator-recipes-2.4.0.jar:/Users/m_kuwako/.ivy2/cache/org.apache.curator/curator-framework/bundles/curator-framework-2.4.0.jar:/Users/m_kuwako/.ivy2/cache/org.apache.curator/curator-client/bundles/curator-client-2.4.0.jar:/Users/m_kuwako/.ivy2/cache/org.apache.commons/commons-math3/jars/commons-math3-3.4.1.jar:/Users/m_kuwako/.ivy2/cache/org.apache.commons/commons-math/jars/commons-math-2.1.jar:/Users/m_kuwako/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.5.jar:/Users/m_kuwako/.ivy2/cache/org.apache.commons/commons-crypto/jars/commons-crypto-1.0.0.jar:/Users/m_kuwako/.ivy2/cache/org.apache.commons/commons-compress/jars/commons-compress-1.4.1.jar:/Users/m_kuwako/.ivy2/cache/org.apache.avro/avro-mapred/jars/avro-mapred-1.7.7-hadoop2.jar:/Users/m_kuwako/.ivy2/cache/org.apache.avro/avro-ipc/jars/avro-ipc-1.7.7-tests.jar:/Users/m_kuwako/.ivy2/cache/org.apache.avro/avro-ipc/jars/avro-ipc-1.7.7.jar:/Users/m_kuwako/.ivy2/cache/org.apache.avro/avro/jars/avro-1.7.7.jar:/Users/m_kuwako/.ivy2/cache/net.sf.py4j/py4j/jars/py4j-0.10.4.jar:/Users/m_kuwako/.ivy2/cache/net.razorvine/pyrolite/jars/pyrolite-4.13.jar:/Users/m_kuwako/.ivy2/cache/net.jpountz.lz4/lz4/jars/lz4-1.3.0.jar:/Users/m_kuwako/.ivy2/cache/net.java.dev.jets3t/jets3t/jars/jets3t-0.7.1.jar:/Users/m_kuwako/.ivy2/cache/log4j/log4j/bundles/log4j-1.2.17.jar:/Users/m_kuwako/.ivy2/cache/javax.ws.rs/javax.ws.rs-api/jars/javax.ws.rs-api-2.0.1.jar:/Users/m_kuwako/.ivy2/cache/javax.validation/validation-api/jars/validation-api-1.1.0.Final.jar:/Users/m_kuwako/.ivy2/cache/javax.servlet/javax.servlet-api/jars/javax.servlet-api-3.1.0.jar:/Users/m_kuwako/.ivy2/cache/javax.inject/javax.inject/jars/javax.inject-1.jar:/Users/m_kuwako/.ivy2/cache/javax.annotation/javax.annotation-api/jars/javax.annotation-api-1.2.jar:/Users/m_kuwako/.ivy2/cache/io.netty/netty-all/jars/netty-all-4.0.42.Final.jar:/Users/m_kuwako/.ivy2/cache/io.netty/netty/bundles/netty-3.8.0.Final.jar:/Users/m_kuwako/.ivy2/cache/io.dropwizard.metrics/metrics-jvm/bundles/metrics-jvm-3.1.2.jar:/Users/m_kuwako/.ivy2/cache/io.dropwizard.metrics/metrics-json/bundles/metrics-json-3.1.2.jar:/Users/m_kuwako/.ivy2/cache/io.dropwizard.metrics/metrics-graphite/bundles/metrics-graphite-3.1.2.jar:/Users/m_kuwako/.ivy2/cache/io.dropwizard.metrics/metrics-core/bundles/metrics-core-3.1.2.jar:/Users/m_kuwako/.ivy2/cache/commons-net/commons-net/jars/commons-net-2.2.jar:/Users/m_kuwako/.ivy2/cache/commons-lang/commons-lang/jars/commons-lang-2.5.jar:/Users/m_kuwako/.ivy2/cache/commons-io/commons-io/jars/commons-io-2.1.jar:/Users/m_kuwako/.ivy2/cache/commons-httpclient/commons-httpclient/jars/commons-httpclient-3.1.jar:/Users/m_kuwako/.ivy2/cache/commons-digester/commons-digester/jars/commons-digester-1.8.jar:/Users/m_kuwako/.ivy2/cache/commons-configuration/commons-configuration/jars/commons-configuration-1.6.jar:/Users/m_kuwako/.ivy2/cache/commons-collections/commons-collections/jars/commons-collections-3.2.1.jar:/Users/m_kuwako/.ivy2/cache/commons-cli/commons-cli/jars/commons-cli-1.2.jar:/Users/m_kuwako/.ivy2/cache/commons-beanutils/commons-beanutils-core/jars/commons-beanutils-core-1.8.0.jar:/Users/m_kuwako/.ivy2/cache/commons-beanutils/commons-beanutils/jars/commons-beanutils-1.7.0.jar:/Users/m_kuwako/.ivy2/cache/com.twitter/chill_2.11/jars/chill_2.11-0.8.0.jar:/Users/m_kuwako/.ivy2/cache/com.twitter/chill-java/jars/chill-java-0.8.0.jar:/Users/m_kuwako/.ivy2/cache/com.thoughtworks.paranamer/paranamer/jars/paranamer-2.6.jar:/Users/m_kuwako/.ivy2/cache/com.ning/compress-lzf/bundles/compress-lzf-1.0.3.jar:/Users/m_kuwako/.ivy2/cache/com.google.protobuf/protobuf-java/bundles/protobuf-java-2.5.0.jar:/Users/m_kuwako/.ivy2/cache/com.google.inject/guice/jars/guice-3.0.jar:/Users/m_kuwako/.ivy2/cache/com.google.guava/guava/bundles/guava-14.0.1.jar:/Users/m_kuwako/.ivy2/cache/com.google.code.findbugs/jsr305/jars/jsr305-1.3.9.jar:/Users/m_kuwako/.ivy2/cache/com.fasterxml.jackson.module/jackson-module-scala_2.11/bundles/jackson-module-scala_2.11-2.6.5.jar:/Users/m_kuwako/.ivy2/cache/com.fasterxml.jackson.module/jackson-module-paranamer/bundles/jackson-module-paranamer-2.6.5.jar:/Users/m_kuwako/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.6.5.jar:/Users/m_kuwako/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.6.5.jar:/Users/m_kuwako/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.6.5.jar:/Users/m_kuwako/.ivy2/cache/com.esotericsoftware/minlog/bundles/minlog-1.3.0.jar:/Users/m_kuwako/.ivy2/cache/com.esotericsoftware/kryo-shaded/bundles/kryo-shaded-3.0.3.jar:/Users/m_kuwako/.ivy2/cache/com.clearspring.analytics/stream/jars/stream-2.7.0.jar:/Users/m_kuwako/.ivy2/cache/com.atilika.kuromoji/kuromoji-core/jars/kuromoji-core-0.9.0.jar:/Users/m_kuwako/.ivy2/cache/com.atilika.kuromoji/kuromoji-ipadic/jars/kuromoji-ipadic-0.9.0.jar Main
+objc[51871]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/bin/java (0x108ab34c0) and /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/libinstrument.dylib (0x109b3f4e0). One of the two will be used. Which one is undefined.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+17/08/04 00:32:50 INFO SparkContext: Running Spark version 2.1.1
+17/08/04 00:32:51 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/08/04 00:32:51 INFO SecurityManager: Changing view acls to: m_kuwako
+17/08/04 00:32:51 INFO SecurityManager: Changing modify acls to: m_kuwako
+17/08/04 00:32:51 INFO SecurityManager: Changing view acls groups to:
+17/08/04 00:32:51 INFO SecurityManager: Changing modify acls groups to:
+17/08/04 00:32:51 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(m_kuwako); groups with view permissions: Set(); users  with modify permissions: Set(m_kuwako); groups with modify permissions: Set()
+17/08/04 00:32:52 INFO Utils: Successfully started service 'sparkDriver' on port 58666.
+17/08/04 00:32:52 INFO SparkEnv: Registering MapOutputTracker
+17/08/04 00:32:52 INFO SparkEnv: Registering BlockManagerMaster
+17/08/04 00:32:52 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+17/08/04 00:32:52 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+17/08/04 00:32:52 INFO DiskBlockManager: Created local directory at /private/var/folders/rf/jc_q92f15kvb3r6nvn712jth0000gn/T/blockmgr-4bbdd7b8-2795-4428-b55e-3e4adbf5c5e5
+17/08/04 00:32:52 INFO MemoryStore: MemoryStore started with capacity 912.3 MB
+17/08/04 00:32:52 INFO SparkEnv: Registering OutputCommitCoordinator
+17/08/04 00:32:53 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+17/08/04 00:32:53 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.11.4:4040
+17/08/04 00:32:53 INFO Executor: Starting executor ID driver on host localhost
+17/08/04 00:32:53 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 58667.
+17/08/04 00:32:53 INFO NettyBlockTransferService: Server created on 192.168.11.4:58667
+17/08/04 00:32:53 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+17/08/04 00:32:53 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.11.4, 58667, None)
+17/08/04 00:32:53 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.11.4:58667 with 912.3 MB RAM, BlockManagerId(driver, 192.168.11.4, 58667, None)
+17/08/04 00:32:53 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.11.4, 58667, None)
+17/08/04 00:32:53 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.11.4, 58667, None)
+17/08/04 00:32:55 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 127.1 KB, free 912.2 MB)
+17/08/04 00:32:55 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 14.3 KB, free 912.2 MB)
+17/08/04 00:32:55 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.11.4:58667 (size: 14.3 KB, free: 912.3 MB)
+17/08/04 00:32:55 INFO SparkContext: Created broadcast 0 from textFile at Main.scala:16
+mapping end
+17/08/04 00:32:56 INFO FileInputFormat: Total input paths to process : 1
+17/08/04 00:32:56 INFO SparkContext: Starting job: foreach at Main.scala:34
+17/08/04 00:32:56 INFO DAGScheduler: Got job 0 (foreach at Main.scala:34) with 2 output partitions
+17/08/04 00:32:56 INFO DAGScheduler: Final stage: ResultStage 0 (foreach at Main.scala:34)
+17/08/04 00:32:56 INFO DAGScheduler: Parents of final stage: List()
+17/08/04 00:32:56 INFO DAGScheduler: Missing parents: List()
+17/08/04 00:32:56 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at map at Main.scala:30), which has no missing parents
+17/08/04 00:32:56 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 3.4 KB, free 912.2 MB)
+17/08/04 00:32:56 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.0 KB, free 912.2 MB)
+17/08/04 00:32:56 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.11.4:58667 (size: 2.0 KB, free: 912.3 MB)
+17/08/04 00:32:56 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:996
+17/08/04 00:32:56 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at map at Main.scala:30)
+17/08/04 00:32:56 INFO TaskSchedulerImpl: Adding task set 0.0 with 2 tasks
+17/08/04 00:32:56 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 6002 bytes)
+17/08/04 00:32:56 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, executor driver, partition 1, PROCESS_LOCAL, 6002 bytes)
+17/08/04 00:32:56 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+17/08/04 00:32:56 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+17/08/04 00:32:56 INFO HadoopRDD: Input split: file:/Users/m_kuwako/IdeaProjects/scala_spark/data/xaa:5000000+5000000
+17/08/04 00:32:56 INFO HadoopRDD: Input split: file:/Users/m_kuwako/IdeaProjects/scala_spark/data/xaa:0+5000000
+17/08/04 00:32:57 INFO deprecation: mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+17/08/04 00:32:57 INFO deprecation: mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+17/08/04 00:32:57 INFO deprecation: mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+17/08/04 00:32:57 INFO deprecation: mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+17/08/04 00:32:57 INFO deprecation: mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+17/08/04 00:32:57 INFO deprecation: mapred.job.id is deprecated. Instead, use mapreduce.job.id
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+7
+7
+8
+8
+9
+9
+10
+10
+11
+11
+12
+12
+13
+13
+14
+14
+15
+15
+16
+16
+...
+395
+55646
+17/08/04 05:57:34 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 1245 bytes result sent to driver
+17/08/04 05:57:34 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 19478062 ms on localhost (executor driver) (2/2)
+17/08/04 05:57:34 INFO DAGScheduler: ResultStage 0 (foreach at Main.scala:34) finished in 19478.184 s
+17/08/04 05:57:34 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+17/08/04 05:57:34 INFO DAGScheduler: Job 0 finished: foreach at Main.scala:34, took 19482.779096 s
+17/08/04 05:57:34 INFO SparkContext: Starting job: count at Main.scala:38
+17/08/04 05:57:34 INFO DAGScheduler: Got job 1 (count at Main.scala:38) with 2 output partitions
+17/08/04 05:57:34 INFO DAGScheduler: Final stage: ResultStage 1 (count at Main.scala:38)
+17/08/04 05:57:34 INFO DAGScheduler: Parents of final stage: List()
+17/08/04 05:57:34 INFO DAGScheduler: Missing parents: List()
+17/08/04 05:57:34 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[3] at map at Main.scala:30), which has no missing parents
+17/08/04 05:57:34 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 3.3 KB, free 912.2 MB)
+17/08/04 05:57:34 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 1989.0 B, free 912.2 MB)
+17/08/04 05:57:34 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 192.168.11.4:58667 (size: 1989.0 B, free: 912.3 MB)
+17/08/04 05:57:34 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:996
+17/08/04 05:57:34 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 1 (MapPartitionsRDD[3] at map at Main.scala:30)
+17/08/04 05:57:34 INFO TaskSchedulerImpl: Adding task set 1.0 with 2 tasks
+17/08/04 05:57:35 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 2, localhost, executor driver, partition 0, PROCESS_LOCAL, 5918 bytes)
+17/08/04 05:57:35 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 3, localhost, executor driver, partition 1, PROCESS_LOCAL, 5918 bytes)
+17/08/04 05:57:35 INFO Executor: Running task 0.0 in stage 1.0 (TID 2)
+17/08/04 05:57:35 INFO Executor: Running task 1.0 in stage 1.0 (TID 3)
+17/08/04 05:57:35 INFO HadoopRDD: Input split: file:/Users/m_kuwako/IdeaProjects/scala_spark/data/xaa:5000000+5000000
+17/08/04 05:57:35 INFO HadoopRDD: Input split: file:/Users/m_kuwako/IdeaProjects/scala_spark/data/xaa:0+5000000
+17/08/04 05:57:38 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 192.168.11.4:58667 in memory (size: 2.0 KB, free: 912.3 MB)
+17/08/04 09:48:41 INFO Executor: Finished task 0.0 in stage 1.0 (TID 2). 1283 bytes result sent to driver
+17/08/04 09:48:41 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 2) in 13866855 ms on localhost (executor driver) (1/2)
+94674
+17/08/04 11:16:09 INFO Executor: Finished task 1.0 in stage 1.0 (TID 3). 1283 bytes result sent to driver
+fitting start
+fitting end
+17/08/04 11:16:09 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 3) in 19114874 ms on localhost (executor driver) (2/2)
+17/08/04 11:16:09 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+17/08/04 11:16:09 INFO DAGScheduler: ResultStage 1 (count at Main.scala:38) finished in 19114.893 s
+17/08/04 11:16:09 INFO DAGScheduler: Job 1 finished: count at Main.scala:38, took 19114.114420 s
+17/08/04 11:16:09 INFO SparkContext: Invoking stop() from shutdown hook
+17/08/04 11:16:10 INFO SparkUI: Stopped Spark web UI at http://192.168.11.4:4040
+17/08/04 11:16:10 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+17/08/04 11:16:10 INFO MemoryStore: MemoryStore cleared
+17/08/04 11:16:10 INFO BlockManager: BlockManager stopped
+17/08/04 11:16:10 INFO BlockManagerMaster: BlockManagerMaster stopped
+17/08/04 11:16:10 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+17/08/04 11:16:10 INFO SparkContext: Successfully stopped SparkContext
+17/08/04 11:16:10 INFO ShutdownHookManager: Shutdown hook called
+17/08/04 11:16:10 INFO ShutdownHookManager: Deleting directory /private/var/folders/rf/jc_q92f15kvb3r6nvn712jth0000gn/T/spark-448dfe40-11b5-4268-8a1e-ab92bff48f94
+
+Process finished with exit code 0
