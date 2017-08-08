@@ -1,17 +1,17 @@
 object BasicPractice {
 
   def main(args: Array[String]): Unit = {
-    println("start")
-    val startA = System.currentTimeMillis()
-    println(getFibonacci(1000).toString())
-    val endA = System.currentTimeMillis()
-    println("getFibonacci spent " + (endA - startA).toString + " second")
+    val loop = 40
 
-    println("start")
-    val startB = System.currentTimeMillis()
-    println(fib(1000).toString())
-    val endB = System.currentTimeMillis()
-    println("fib spent " + (endB - startB).toString + " second")
+    val timer1 = new Timer
+    println(getFibonacci(loop).toString())
+    timer1.end()
+    timer1.report("getFibonacci")
+
+    val timer2 = new Timer
+    println(fib(loop).toString())
+    timer2.end()
+    timer2.report("fib")
   }
 
   // n 番目のフィボナッチ数を取得する再帰関数を記述せよ
