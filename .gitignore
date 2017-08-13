@@ -7,3 +7,11 @@ target
 out
 .DS_Store
 data/output.txt
+data/derby.log
+data/metastore_db/
+data/xaa
+data/xab
+data/xac
+data/xad
+data/xae
+data/xaf
