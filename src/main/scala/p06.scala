@@ -11,11 +11,13 @@ import scala.annotation.tailrec
 object p06 {
   def main(args: Array[String]): Unit = {
     val list = List(1, 3, 5, 7 , 9, 11, 13)
+    val list_pal = List(1, 2, 3, 2, 1)
 
     println(isPalidrome(list))
+    println(isPalidrome(list_pal))
   }
 
-  def isPalidrome[T](list: List[T], buffer: List[T] = Nil): Boolean = list match {
-    case _ => sys.error("something wrong")
+  def isPalidrome[T](list: List[T]): Boolean = {
+    list == p05.reverse(list)
   }
 }
