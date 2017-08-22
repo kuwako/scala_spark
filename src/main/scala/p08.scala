@@ -15,7 +15,7 @@ object p08 {
 
   def compress[T](list: List[T]): List[T] = {
     def compress_[T](pre: T, rest: List[T]): List[T] = rest match {
-      case x :: xs if x == pre => compress_(pre, xs)
+      case x :: xs if x == pre => compress_(x, xs)
       case x :: xs => pre :: compress_(x, xs)
       case Nil => pre :: Nil
     }
