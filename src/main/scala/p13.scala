@@ -13,11 +13,18 @@ object p13 {
   }
 
   def encodeDirect[T](list: List[T]): List[(Int, T)] = {
-    list.flatMap{ case (n, x) => copyN(n, x)}
+    def _encodeDirect(pre: T, n: Int, rest: List[T]): List[(Int, T)] = {
+      rest match {
+        case x :: xs if pre == x => _encodeDirect(pre, n + 1, xs)
+        case x :: xs => (n, pre) :: _encodeDirect(pre, 1, xs)
+        case _ => List((n, pre))
+      }
+    }
+
+    list match {
+      case x :: xs => _encodeDirect(x, 1, xs)
+      case _ => List()
+    }
   }
 
-  def copyN[T](n: Int, x: T): List[T] = n match {
-    case m if (m > 0) => x :: copyN(m - 1, x)
-    case 0 => Nil
-  }
 }
