@@ -16,5 +16,5 @@ object p20 {
       case x :: xs if num == 0 => (xs, x)
       case x :: xs if num > 0 => removeAt(num - 1, xs) match {case (ys, y) => (x :: ys, y)}
       case _ => sys.error("error")
-    }
+  }
 }
