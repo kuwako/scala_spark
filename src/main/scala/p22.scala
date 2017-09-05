@@ -2,7 +2,6 @@
 // Example:
 //   scala> range(4, 9)
 // res0: List[Int] = List(4, 5, 6, 7, 8, 9)
-
 // http://aperiodic.net/phil/scala/s-99/
 // https://github.com/dwango/S99/tree/master/src/main/scala/jp/co/dwango/s99
 
