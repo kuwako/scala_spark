@@ -1,7 +1,1 @@
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-cccccccccccccccccccccccccccccccccccccccc
-dddddddddddddddddddddddddddddddd
-ffffffffffffffffffffffff
-ab
-bbb
+This is my scala practicing space.
