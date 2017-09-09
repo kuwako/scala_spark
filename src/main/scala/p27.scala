@@ -1,4 +1,3 @@
-
 // Problem 27 Group the elements of a set into disjoint subsets.
 // a) In how many ways can a group of 9 people work in 3 disjoint subgroups of 2, 3 and 4 persons? Write a function that generates all the possibilities.
 //     Example:
@@ -18,6 +17,20 @@
 // https://github.com/dwango/S99/tree/master/src/main/scala/jp/co/dwango/s99
 
 object p27 {
-    def main(args: Array[String]): Unit = {
+  def main(args: Array[String]): Unit = {
+    println(group3(List("Aldo", "Beat", "Carla", "David", "Evi", "Flip", "Gary", "Hugo", "Ida")))
+//    println(group(List(2, 2, 5), List("Aldo", "Beat", "Carla", "David", "Evi", "Flip", "Gary", "Hugo", "Ida")))
+  }
+
+  def group3[T](list: List[T]): List[(List[T], List[T], List[T])] = {
+    for {
+      groupWith2Elements <- p26.combinations(2, list)
+      groupWith3Elements <- p26.combinations(3, list diff groupWith2Elements)
     }
+      yield (groupWith2Elements, groupWith3Elements, list diff groupWith2Elements diff groupWith3Elements)
+  }
+
+//  def group[T](order: List[Int], list: List[T]): List[List[List[T]]] = {
+//
+//  }
 }
