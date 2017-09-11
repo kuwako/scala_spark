@@ -19,9 +19,19 @@ import scala.annotation.tailrec
 object p28 {
   def main(args: Array[String]): Unit = {
     println(lsort(List(List('a, 'b, 'c), List('d, 'e), List('f, 'g, 'h), List('d, 'e), List('i, 'j, 'k, 'l), List('m, 'n), List('o))))
+
+    println(lsortFreq(List(List('a, 'b, 'c), List('d, 'e), List('f, 'g, 'h), List('d, 'e), List('i, 'j, 'k, 'l), List('m, 'n), List('o))))
   }
 
-  def lsort[T](list: List[List[T]]): List[List[T]] = {
-    list.map(x => (x.size, x)).sortBy(x => x._1).map(y => y._2)
+  def lsort[T](list: List[List[T]]): List[List[T]] = list.map(x => (x.size, x)).sortBy(x => x._1).map(y => y._2)
+
+  def lsortFreq[T](list: List[List[T]]): List[List[T]] = {
+    val listTuple = list.map(x => (x.size, x))
+    val freq = listTuple.foldLeft(Map[Int, Int]()) {
+      case (map, (len, lst)) =>
+        map.updated(len, map.getOrElse(len, 0) + 1)
+    }
+
+    listTuple.map(x => (x._2, freq(x._1))).sortBy(y => y._2).map(z => z._1)
   }
 }
