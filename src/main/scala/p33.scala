@@ -4,33 +4,21 @@
 // Each individual solution will show the relevant additions to the S99Int class.
 // The full class will be given at the end of the section.
 
-// Problem 32 Use Euclid's algorithm.
-// scala> gcd(36, 63)
-// res0: Int = 9
+// Problem 33 Determine whether two positive integer numbers are coprime.
+// Two numbers are coprime if their greatest common divisor equals 1.
+// scala> 35.isCoprimeTo(64)
+// res0: Boolean = true
 
 // http://aperiodic.net/phil/scala/s-99/
 // https://github.com/dwango/S99/tree/master/src/main/scala/jp/co/dwango/s99
 
-object p32 {
+object p33 {
   def main(args: Array[String]): Unit = {
-    println(gcd(36, 63))
-    println(gcd(34, 63))
+    println(33.isCoprimeTo(64))
+    println(36.isCoprimeTo(64))
   }
 
-  def gcd(i: Int, j: Int): Int = {
-    if (i == 0 || j == 0) 0
-    else euclideanAlgorithm(i, j)
-  }
-
-  def euclideanAlgorithm(i: Int, j: Int): Int = {
-    if (i > j) {
-      if (i % j == 0) j
-      else euclideanAlgorithm(j, i % j)
-    } else if (i < j) {
-      if (j % i == 0) i
-      else euclideanAlgorithm(i, j % i)
-    } else {
-      i
-    }
+  implicit class RichInt(self: Int) {
+    def isCoprimeTo(i: Int): Boolean = p32.gcd(self, i) == 1
   }
 }
