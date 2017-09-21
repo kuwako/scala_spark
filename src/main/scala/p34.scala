@@ -17,15 +17,14 @@ object p34 {
 
   implicit class RichInt(self: Int) {
     def totient(): Int = {
+      def calcToitent(i: Int): Int = i match {
+        case x if (x > sqrt(self)) => 0
+        case x if (self % x == 0) => 1 + calcToitent(i + 1)
+        case _ => calcToitent(i + 1)
+      }
+
       val sum: Int = calcToitent(1)
-
       sum * 2
-    }
-
-    def calcToitent(i: Int): Int = i match {
-      case x if (x > sqrt(self)) => 0
-      case x if (self % x == 0) => 1 + calcToitent(i + 1)
-      case _ => calcToitent(i + 1)
     }
   }
 }
