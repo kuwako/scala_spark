@@ -26,7 +26,12 @@ object p36 {
       }
 
       val res = calcPrimeFactors(self, 2)
-      res.map(x => (x, 1)).groupBy(y => y._1).mapValues(_.foldLeft(0)(_ + _._2)).toSeq.sortBy(_._1).toMap
+      res.map(x => (x, 1))
+          .groupBy(y => y._1)
+          .mapValues(_.foldLeft(0)(_ + _._2))
+          .toSeq
+          .sortBy(_._1)
+          .toMap
     }
   }
 }
