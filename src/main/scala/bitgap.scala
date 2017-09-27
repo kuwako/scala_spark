@@ -13,15 +13,20 @@
 
 object bitgap {
   def main(args: Array[String]): Unit = {
+    println(calc(6))
     println(calc(5))
     println(calc(1041))
     println(calc(15))
   }
 
-  def calc(i: Int): Int = {
-    val bitStr = i.toBinaryString
-    val zeroArr = bitStr.split("1")
+  def calc(n: Int): Int = {
+    val bitStr = n.toBinaryString
+    var zeroArr = bitStr.split("1")
     if (zeroArr.isEmpty) 0
-    else zeroArr.maxBy(_.length).length
+    else {
+      if (bitStr.endsWith("0"))
+        zeroArr = zeroArr.init
+      zeroArr.maxBy(_.length).length
+    }
   }
 }
