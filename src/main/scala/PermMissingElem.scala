@@ -30,12 +30,19 @@ Elements of input arrays can be modified.
 
 object PermMissingElem {
     def main(args: Array[String]): Unit = {
-        println(solution(Array(2, 3, 1, 5)))
+        println(solution(Array(2, 3, 1, 5))) // 4
+        println(solution(Array(1))) // 2
+        println(solution(Array(2))) // 1
+        println(solution(Array())) // 1
+        println(solution(Array(4, 2, 3, 1, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15))) // 16
     }
 
     def solution(a: Array[Int]): Int = {
-        // write your code in Scala 2.12
-        val b = a.toList
-
+        // ((配列の数 + 1) + 1) * (配列の数 + 1) / 2 が欠損がなかった場合の総和
+        val sumTmp: Int = ((a.length + 1) + 1) * (a.length + 1) / 2
+        // 実際の配列の総和を計算
+        val sum: Int = a.sum
+        // 差分が答え
+        sumTmp - sum
     }
 }
