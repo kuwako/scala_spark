@@ -58,15 +58,16 @@ object PermCheck {
         println(solution(Array(4, 2, 3, 1, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15))) // 1
     }
     def solution(a: Array[Int]): Int = {
+        if (a.isEmpty) return 0
+
         var b = a.sorted
-        println(b)
 
         calc(b, 0)
     }
 
     def calc(arr: Array[Int], i: Int): Int = arr.head match {
-        case (i + 1) if arr.tail == Array.empty => 1
-        case (i + 1) => calc(arr.tail, i + 1)
+        case x if x == i + 1 && arr.tail.isEmpty => 1
+        case x if x == i + 1 => calc(arr.tail, i + 1)
         case _ => 0
     }
 
