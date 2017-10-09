@@ -18,7 +18,7 @@ object MyChallenge {
         val max = 40000
         var num = max
 
-        
+
 
 
         // 適用できるものがなければ-1を返す
