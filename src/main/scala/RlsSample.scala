@@ -19,11 +19,21 @@ object RlsSample {
     val PERSON_NUM = 3
 
     def main(args: Array[String]): Unit = {
-        println(solution(Array(1, 5, 4)))
+        println(solution(Array(1, 2, 4)))
     }
 
     def solution(arr: Array[Int]): Unit = {
         for (index <- 0 until arr.length) {
+            var doAnalysis = false
+            if (index != 0) doAnalysis = true
+
+            if (calc(index, doAnalysis)) return
+        }
+
+        // 1周しても答えが出なかった場合
+        calc(0, true)
+
+        def calc(index: Int, doAnalysis: Boolean): Boolean = {
             // 1 ~ CARD_MAXまでの配列を作る
             val cards = 1.to(CARD_MAX).toArray
             val tmp_arr = arr.filter(n => n != arr(index))
@@ -33,26 +43,24 @@ object RlsSample {
 
             if (isMax(candidate, index)) {
                 println(index + ": MAX")
-                return
+                true
             } else if (isMin(candidate, index)) {
                 println(index + ": MIN")
-                return
+                true
             } else if (isMid(candidate)) {
                 println(index + ": MID")
-                return
+                true
             } else {
                 println(index + ": ?")
+                false
             }
         }
-
-        // TODO 1周しても答えが出なかった場合
-
 
 
         def analysis(candidate: Array[Int]): Array[Int] = {
             // 今までの結果から更にcandidateを絞り込む
             // 最大から最大 - (人数 - 1)が埋まっているわけじゃない => 最大 ~ (人数 - 1)の間にもし一つだけ空いた要素があるならば、自分はそれではない
-            // TODO 雑な方法
+            // TODO 雑な方法なのでリファクタ
             if (!candidate.contains(CARD_MAX - 1)) candidate(CARD_MAX - 1) = 0
             if (!candidate.contains(2)) candidate(0) = 0
 
