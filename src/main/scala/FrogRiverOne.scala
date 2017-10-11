@@ -48,9 +48,9 @@ Elements of input arrays can be modified.
 */
 object FrogRiverOne {
     def main(args: Array[String]): Unit = {
-        println(solution(5, Array(1, 3, 1, 4, 2, 3, 5, 4))) // require 6
-        println(solution(5, Array(1, 3, 1, 4, 3, 5, 4))) // require -1
-        println(solution(5, Array(1, 3, 1, 2, 2, 3, 5, 4))) // require 7
+        println(solution2(5, Array(1, 3, 1, 4, 2, 3, 5, 4))) // require 6
+        println(solution2(5, Array(1, 3, 1, 4, 3, 5, 4))) // require -1
+        println(solution2(5, Array(1, 3, 1, 2, 2, 3, 5, 4))) // require 7
     }
 
     // 1 ~ xまでの全ての数字が揃ったときのindexを返す必要がある
@@ -67,5 +67,30 @@ object FrogRiverOne {
         if (tmp2.sameElements(ans)) i
         else if (leaves.tail.isEmpty) -1
         else calc(i + 1, leaves.tail, tmp2, ans)
+    }
+
+
+    def solution2(X: Int, A: Array[Int]): Int = {
+        val pos: Array[Int] = Array.ofDim(X + 1)
+
+        def areAllLeavesInPlace = {
+            def rec(i: Int): Boolean = {
+                if (i == X + 1) true
+                else if (pos(i) == 0) false
+                else rec(i + 1)
+            }
+            rec(1)
+        }
+
+        def findTime(step: Int, L: List[Int]): Int = {
+            if (L.isEmpty) -1
+            else {
+                pos(L.head) = pos(L.head) + 1
+                if (areAllLeavesInPlace) step
+                else findTime(step + 1, L.tail)
+            }
+        }
+
+        findTime(0, A.toList)
     }
 }
