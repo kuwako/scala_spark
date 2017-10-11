@@ -19,7 +19,7 @@ object RlsSample {
     val PERSON_NUM = 3
 
     def main(args: Array[String]): Unit = {
-        println(solution(Array(1, 2, 4)))
+        println(solution(Array(1, 5, 4)))
     }
 
     def solution(arr: Array[Int]): Unit = {
@@ -28,15 +28,16 @@ object RlsSample {
             val cards = 1.to(CARD_MAX).toArray
             val tmp_arr = arr.filter(n => n != arr(index))
             // 他人のカードを見て、自分の選択肢を絞る
-            val candidate = cards.map(x => if(tmp_arr.contains(x)) 0 else x)
+            var candidate = cards.map(x => if(tmp_arr.contains(x)) 0 else x)
+            if (index != 0) candidate = analysis(candidate)
 
-            if (isMax(candidate, 0)) {
+            if (isMax(candidate, index)) {
                 println(index + ": MAX")
                 return
-            } else if (isMin(candidate, 0)) {
+            } else if (isMin(candidate, index)) {
                 println(index + ": MIN")
                 return
-            } else if (isMid(candidate, 0)) {
+            } else if (isMid(candidate)) {
                 println(index + ": MID")
                 return
             } else {
@@ -44,40 +45,40 @@ object RlsSample {
             }
         }
 
+        // TODO 1周しても答えが出なかった場合
+
+
+
+        def analysis(candidate: Array[Int]): Array[Int] = {
+            // 今までの結果から更にcandidateを絞り込む
+            // 最大から最大 - (人数 - 1)が埋まっているわけじゃない => 最大 ~ (人数 - 1)の間にもし一つだけ空いた要素があるならば、自分はそれではない
+            // TODO 雑な方法
+            if (!candidate.contains(CARD_MAX - 1)) candidate(CARD_MAX - 1) = 0
+            if (!candidate.contains(2)) candidate(0) = 0
+
+            candidate
+        }
+
         // もし、他人が1 ~ (PERSON_NUM - 1)までを持っていればMAX
         def isMax(candidate: Array[Int], index: Int): Boolean = {
-            val a = 1.to(PERSON_NUM - 1 + index)
+            if (arr.filter(x => x != arr(index)).max > candidate.filter(x => x != 0).max) return false
+            val a = 1.to(PERSON_NUM - 1)
             // もしcandidateの中にaに一致するものがなければtrue
-            val subCandidate = candidate.filter(x => !a.contains(x) && x != 0)
-
-            // 残っている候補とそこからaを引いた候補が同じ中身なら最大
-            candidate.filter(x => x != 0).sameElements(subCandidate)
+            candidate.sameElements(candidate.filter(x => !a.contains(x)))
         }
 
         // もし、他人が(CARD_MAX - PERSON_NUM) ~ CARD_MAXまでを持っていればMIN
         def isMin(candidate: Array[Int], index: Int): Boolean = {
-            val a = ((CARD_MAX - PERSON_NUM + 1) + 1 - index).to(CARD_MAX)
-            val subCandidate = candidate.filter(x => !a.contains(x) && x != 0)
+            if (arr.filter(x => x != arr(index)).min < candidate.filter(x => x != 0).min) return false
 
-            candidate.filter(x => x != 0).sameElements(subCandidate)
+            val a = ((CARD_MAX - PERSON_NUM + 1) + 1).to(CARD_MAX)
+            candidate.sameElements(candidate.filter(x => !a.contains(x)))
         }
 
         // もし、他人がCARD_MAXと1 ~ (PERSON_NUM - 2)までを持っていればMID
-        def isMid(candidate: Array[Int], index: Int): Boolean = {
-            val a = 1.to(PERSON_NUM - 2 + index)
-            val subCandidate = candidate.filter(x => !a.contains(x) && x != 0 && x != CARD_MAX)
-
-            candidate.filter(x => x != 0).sameElements(subCandidate)
+        def isMid(candidate: Array[Int]): Boolean = {
+            val a = 1.to(PERSON_NUM - 2)
+            candidate.sameElements(candidate.filter(x => !a.contains(x) && x != CARD_MAX))
         }
-        // それ以外ならば ?
-
-        // 二人目以降
-        // 1 ~ CARD_MAXまでの配列を作る
-        // 他人のカードを見て、自分の選択肢を絞る
-        // もし、他人が1 ~ (PERSON_NUM - 1)まで(そのうちの一つが穴あきでも良い)を持っていればMAX
-        // もし、他人が(CARD_MAX - PERSON_NUM) ~ CARD_MAXまで(そのうちの一つが穴あきでも良い)を持っていればMIN
-        // もし、他人がCARD_MAXと1 ~ (PERSON_NUM - 2)まで(そのうち1つが穴あきでも良い)を持っていればMID
-
-        // TODO 最後にもう一回一人
     }
 }
