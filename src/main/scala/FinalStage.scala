@@ -15,13 +15,13 @@ object FinalStage {
         var cin = new Scanner(System.in)
         var num = cin.nextInt
         println("input: " + num)
-        solution(num)
         cin.close()
+        println(solution(num))
     }
 
     def solution(total: Int): Int = {
-        def getCombinationOfGame(_total: Int): List[Any] = {
-            var result: List[Any] = Nil
+        def getCombinationOfGame(_total: Int): List[List[Int]] = {
+            var result: List[List[Int]] = Nil
 
             for (firstStageGame <- FIRST_STAGE_MIN until FIRST_STAGE_MAX) {
                 for (finalStageGame <- FINAL_STAGE_MIN until FINAL_STAGE_MAX) {
@@ -35,14 +35,34 @@ object FinalStage {
             result
         }
 
+        def calcFirstStage(i: Int): Int = {
+
+        }
+
+        // TODO
+        def getTotalGameCombination(combination: List[Int]): Int = {
+            // ファーストステージの組み合わせ計算
+            val firstStage = calcFirstStage(combination(0))
+            // ファイナルステージの組み合わせ計算
+            val finalStage = 1
+            // 日本シリーズの組み合わせ計算
+            val japanSeries = 1
+
+            firstStage * finalStage * japanSeries
+        }
+
 
         // 試合数の組を分解する
         val combGame = getCombinationOfGame(total)
         println(combGame)
 
-        0
+        var sum = 0
         // それぞれでループを回し、組み合わせを算出
+        for (combination <- 0 until combGame.length) {
+            sum += getTotalGameCombination(combGame(combination))
+        }
         // 組み合わせを合計する
 
+        sum
     }
 }
