@@ -36,7 +36,10 @@ object FinalStage {
         }
 
         def calcFirstStage(i: Int): Int = {
-
+            // TODO 合計でi試合になるような組み合わせの数を考える
+            for (i <- 1 to 3) {
+                //
+            }
         }
 
         // TODO
