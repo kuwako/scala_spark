@@ -31,6 +31,7 @@ object MissingInteger extends App {
         println(solution(Array(-1, 2, -3)))
     }
 
+    // score: 100
     // 配列に存在しない中で最小の正の整数を返す
     def solution(a: Array[Int]): Int = {
         val b = a.filter(_ > 0).distinct.sorted.zipWithIndex
