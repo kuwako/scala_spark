@@ -28,4 +28,12 @@ object CountDiv extends App {
         b / k - (a - 1) / k
     }
 
+    // score 100
+    def solution2(A: Int, B: Int, K: Int): Int = {
+        val div = (B / K - A / K)
+        val mul = if (A % K == 0) 1 else 0
+
+        div + mul
+    }
+
 }
