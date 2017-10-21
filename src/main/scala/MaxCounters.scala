@@ -67,13 +67,12 @@ object MaxCounters extends App {
 
     // score
     def solution(n: Int, a: Array[Int]): Array[Int] = {
-        val res = Array.ofDim[Int](n)
+        var res = Array.ofDim[Int](n)
         a.foreach(x => {
             if (x > 0 && x <= n) {
                 res(x - 1) = res(x - 1) + 1
             } else if (x == n + 1){
-                val y = res(x - 1)
-                res.foreach(b => y)
+                res = res.map(b => res.max)
             }
         })
 
