@@ -63,9 +63,10 @@ Elements of input arrays can be modified.
 object MaxCounters extends App {
     override def main(args: Array[String]): Unit = {
         println(solution(5, Array(3, 4, 4, 6, 1, 4, 4)).toList)
+        println(solution2(5, Array(3, 4, 4, 6, 1, 4, 4)).toList)
     }
 
-    // score
+    // score 44
     def solution(n: Int, a: Array[Int]): Array[Int] = {
         var res = Array.ofDim[Int](n)
         a.foreach(x => {
@@ -77,5 +78,30 @@ object MaxCounters extends App {
         })
 
         res
+    }
+
+    // score 88
+    def solution2(N: Int, A: Array[Int]): Array[Int] = {
+        val counters: Array[Int] = Array.ofDim(N)
+
+        def increaseCounter(x: Int) = counters(x - 1) = counters(x - 1) + 1
+
+        def maxCounters() = {
+            val max = counters.max
+            for (i <- counters.indices) counters(i) = max
+        }
+
+        def getCounters(ops: List[Int]): Array[Int] = {
+            if (ops.isEmpty) counters
+            else {
+                ops.head match {
+                    case x: Int if x >= 1 && x <= N => increaseCounter(x)
+                    case x: Int if x > N => maxCounters()
+                }
+                getCounters(ops.tail)
+            }
+        }
+
+        getCounters(A.toList)
     }
 }
