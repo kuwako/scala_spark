@@ -43,7 +43,7 @@ object Triangle extends App {
       println(solution(Array(10, 50, 2, 1)))
     }
 
-    // score
+    // score 75
     def solution(a: Array[Int]): Int = {
       // a + b > c の組を見つける
       for (x <- 0 until a.size - 2) {
