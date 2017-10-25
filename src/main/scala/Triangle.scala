@@ -41,6 +41,8 @@ object Triangle extends App {
     override def main(args: Array[String]): Unit = {
       println(solution(Array(10, 2, 5, 1, 8, 20)))
       println(solution(Array(10, 50, 2, 1)))
+      println(solution2(Array(10, 2, 5, 1, 8, 20)))
+      println(solution2(Array(10, 50, 2, 1)))
     }
 
     // score 75
@@ -63,5 +65,12 @@ object Triangle extends App {
   def check(x: Int, y: Int, z: Int): Boolean = {
     if (x + y > z && x + z > y && y + z > x) true
     else false
+  }
+
+  // score 100
+  def solution2(a: Array[Int]): Int = {
+    val sa = a.sorted
+    for (p <- 0 to sa.length - 3) if (sa(p) + sa(p + 1) > sa(p + 2)) return 1
+    0
   }
 }
