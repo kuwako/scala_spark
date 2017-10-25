@@ -67,7 +67,7 @@ object Triangle extends App {
     else false
   }
 
-  // score 100
+  // score 93
   def solution2(a: Array[Int]): Int = {
     val sa = a.sorted
     for (p <- 0 to sa.length - 3) if (sa(p) + sa(p + 1) > sa(p + 2)) return 1
