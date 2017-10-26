@@ -43,14 +43,41 @@ Elements of input arrays can be modified.
 
 */
 
+import scala.math.abs
 object MaxProductOfThree extends App {
     override def main(args: Array[String]): Unit = {
         println(solution(Array(-3, 1, 2, -2, 5, 6)))
+        println(solution2(Array(-3, 1, 2, -2, 5, 6)))
+        println(solution2(Array(10, 10, 10)))
     }
 
     // score 44
     def solution(a: Array[Int]): Int = {
         val b = a.sorted.reverse
         b(0) * b(1) * b(2)
+    }
+
+    // score 100
+    def solution2(a: Array[Int]): Int = {
+        val b = a.sorted
+        var c: Array[Int] = null
+        if (b.size > 6) {
+            c = Array(b(0), b(1), b(2), b(b.size - 3), b(b.size - 2), b(b.size - 1)).filter(_ != 0)
+            if (c.length < 3) return 0
+        } else {
+            c = b
+        }
+        var max = Integer.MIN_VALUE
+        val len = c.length
+
+        for(x <- 0 until len - 2) {
+            for (y <- x + 1 until len - 1) {
+                for (z <- y + 1 until len) {
+                    if (max < c(x) * c (y) * c(z)) max = c(x) * c(y) * c(z)
+                }
+            }
+        }
+
+        max
     }
 }
