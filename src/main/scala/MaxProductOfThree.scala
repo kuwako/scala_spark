@@ -48,7 +48,7 @@ object MaxProductOfThree extends App {
         println(solution(Array(-3, 1, 2, -2, 5, 6)))
     }
 
-    // score
+    // score 44
     def solution(a: Array[Int]): Int = {
         val b = a.sorted.reverse
         b(0) * b(1) * b(2)
