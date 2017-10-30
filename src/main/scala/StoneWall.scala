@@ -35,27 +35,21 @@ object StoneWall extends App {
   override def main(args: Array[String]): Unit = {
 //      println(solution2(Array(1, 3, 6, 4, 1, 2)))
 
-      println(solution2(Array(8, 8, 5, 7, 9, 8, 7, 4, 8)))
+      println(solution(Array(8, 8, 5, 7, 9, 8, 7, 4, 8)))
   }
 
-  def solution(a: Array[Int]): Int = {
-    // TODO 自分より右に自分と同じ高さの石があるか確認する(ただし、それまでに自分より小さい高さが指定されていたらダメ)
-    // TODO もしあればその要素を排除
-
-    // TODO 最後に配列の長さを返す
-    a.size
-  }
-
-  def solution2(H: Array[Int]): Int = {
+  def solution(H: Array[Int]): Int = {
 
     val stack = new mutable.Stack[Int]
     var blocks = 0
 
     for(h <- H) {
+      // stackがカラか、今回の高さhがstack.top(直前の高さ)が下回る場合はstackから取り出す
       while(stack.nonEmpty && stack.top > h) {
         stack.pop()
       }
 
+      // stackがカラか、stackの先頭の高さと同じでない = ブロックを新たに積む必要がある場合はstackに追加してblock数も追加
       if(stack.isEmpty || stack.top != h) {
         stack.push(h)
         blocks += 1
