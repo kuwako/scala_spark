@@ -52,4 +52,27 @@ object Brackets extends App {
       if (stack.isEmpty) 1
       else 0
     }
+
+  // score 100
+  def solution2(S: String): Int = {
+    var list = List[Char]()
+    for (i <- S.indices) {
+      S(i) match {
+        case '{' | '[' | '(' => list = S(i) :: list
+        case '}' =>
+          if (list.isEmpty) return 0
+          if (list.head == '{') list = list.tail
+
+        case ']' =>
+          if (list.isEmpty) return 0
+          if (list.head == '[') list = list.tail
+
+        case ')' =>
+          if (list.isEmpty) return 0
+          if (list.head == '(') list = list.tail
+
+      }
+    }
+    if (list.isEmpty) 1 else 0
+  }
 }
