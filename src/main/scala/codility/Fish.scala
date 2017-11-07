@@ -1,7 +1,4 @@
 package codility
-
-import scala.collection.mutable
-
 /*
 You are given two non-empty zero-indexed arrays A and B consisting of N integers. Arrays A and B represent N voracious fish in a river, ordered downstream along the flow of the river.
 
@@ -46,6 +43,7 @@ expected worst-case space complexity is O(N), beyond input storage (not counting
 Elements of input arrays can be modified.
  */
 
+import scala.collection.mutable
 object Fish {
   def main(args: Array[String]) = {
     println(
@@ -54,9 +52,16 @@ object Fish {
         Array(0, 1, 0, 0, 0)
       )
     )
+
+    println(
+      solution(
+        Array(0, 1),
+        Array(1, 1)
+      )
+    ) // expected 2
   }
 
-  // score 87
+  // score 100
   def solution(a: Array[Int], b: Array[Int]): Int = {
     // b(x) = 1の動きだけ考えればよい？
     val stack = new mutable.Stack[Int]
@@ -71,11 +76,11 @@ object Fish {
           downNum += 1
         }
         if (!stack.isEmpty && stack.head > a(i)) {
-          a(i) = 0
+          a(i) = -1
         }
       }
     }
 
-    a.filter(_ != 0).size - downNum
+    a.filter(_ != -1).size - downNum
   }
 }
