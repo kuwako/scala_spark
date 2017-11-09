@@ -1,4 +1,4 @@
-package codility
+package prac
 
 import java.util.Scanner;
 object FinalStage {
