@@ -56,8 +56,40 @@ object EquiLeader {
     )
   }
 
-  // score
-  def solution(a: Array[Int]): Int = {
-    0
+  // score 11
+  def solution(A: Array[Int]): Int = {
+    def findLeader(A: Array[Int]): Int = {
+      val n = A.length
+      var size = 0
+      var value = -1
+      for (i <- 0 until n) {
+        if (size == 0) {
+          size = size + 1
+          value = A(i)
+        } else if (value != A(i)) size = size - 1
+        else size = size + 1
+      }
+      var candidate = -1
+      if (size > 0) candidate = value
+      var leader = -1
+      var count = 0
+      for (k <- 0 until n) if (A(k) == candidate) count = count + 1
+      if (count >= n / 2) leader = candidate
+      A.indexOf(leader)
+    }
+
+    var count = 0
+    for (i <- 0 to A.length - 2) {
+      val as1 = A.slice(0, i + 1)
+//      println(as1.toList)
+      val as2 = A.slice(i + 1, A.length)
+//      println(as2.toList)
+      if (findLeader(as1) == findLeader(as2)) {
+//        println(s"equileader found: $i")
+        count = count + 1
+      }
+    }
+
+    count
   }
 }
