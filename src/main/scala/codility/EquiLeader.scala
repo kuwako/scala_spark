@@ -50,19 +50,7 @@ Elements of input arrays can be modified.
 import scala.annotation.tailrec
 object EquiLeader {
   def main(args: Array[String]) = {
-    println(
-      solution(
-        Array(4, 3, 4, 4, 4, 2)
-      )
-    )
-
-    println(
-      solution(
-        Array(1, 2)
-      )
-    )
-
-    println(
+   println(
       solution2(
         Array(4, 3, 4, 4, 4, 2)
       )
@@ -146,9 +134,16 @@ object EquiLeader {
   }
 
   def findCandidate(A: Array[Int]): Int = {
+    /**
+      * A: 元の配列
+      * ind: index
+      * candidate:
+      * occur: candidateと同値が現れた回数
+     */
     @tailrec
     def findCandidate(A: Array[Int], ind: Int, candidate: Int, occur: Int): Int = {
       if(ind >= A.length) {
+        // 処理終了
         candidate
       } else if(candidate == A(ind)) {
         findCandidate(A, ind + 1, candidate, occur + 1)
