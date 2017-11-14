@@ -42,7 +42,7 @@ object Dominator {
     )
   }
 
-  // score 66
+  // score 83
   def solution(A: Array[Int]): Int = {
     val cnt = A.length
     if (cnt == 0) return -1
