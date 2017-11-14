@@ -42,8 +42,11 @@ object Dominator {
     )
   }
 
+  // score 66
   def solution(A: Array[Int]): Int = {
     val cnt = A.length
+    if (cnt == 0) return -1
+
     val resMap = collection.mutable.Map[Int, Int]()
 
     A.foreach(node => {
@@ -51,7 +54,7 @@ object Dominator {
     })
 
     val res = resMap.maxBy(_._2)
-    if (res._2 < cnt / 2) -1
-    else res._1
+    if (res._2 < cnt / 2.0) -1
+    else A.indexWhere(_ == res._1)
   }
 }
