@@ -43,6 +43,11 @@ object Dominator {
   }
 
   // score 83
+  /**
+    * The following issues have been detected: wrong answers.
+    * For example, for the input [2, 1, 1, 3] the solution returned a wrong answer
+    * (got 1, but element is not a dominator, value 1 has only 2 occurences (n=4)).
+   */
   def solution(A: Array[Int]): Int = {
     val cnt = A.length
     if (cnt == 0) return -1
