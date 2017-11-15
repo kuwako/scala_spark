@@ -35,19 +35,19 @@ Elements of input arrays can be modified.
 
 object Dominator {
   def main(args: Array[String]) = {
+//    println(
+//      solution(
+//        Array(3, 4, 3, 2, 3, -1, 3, 3)
+//      )
+//    )
     println(
       solution(
-        Array(3, 4, 3, 2, 3, -1, 3, 3)
+        Array(2, 1, 1, 3)
       )
     )
   }
 
-  // score 83
-  /**
-    * The following issues have been detected: wrong answers.
-    * For example, for the input [2, 1, 1, 3] the solution returned a wrong answer
-    * (got 1, but element is not a dominator, value 1 has only 2 occurences (n=4)).
-   */
+  // score 100
   def solution(A: Array[Int]): Int = {
     val cnt = A.length
     if (cnt == 0) return -1
@@ -59,7 +59,7 @@ object Dominator {
     })
 
     val res = resMap.maxBy(_._2)
-    if (res._2 < cnt / 2.0) -1
+    if (res._2 <= cnt / 2.0) -1
     else A.indexWhere(_ == res._1)
   }
 }
