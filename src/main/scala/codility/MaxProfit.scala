@@ -40,6 +40,7 @@ Elements of input arrays can be modified.
 
  */
 
+// score
 object MaxProfit {
   def main(args: Array[String]) = {
     println(
