@@ -50,15 +50,23 @@ object MaxProfit {
     )
   }
 
+  // score 100
   def solution(A: Array[Int]): Int = {
     var min = Integer.MAX_VALUE
     var max = 0
-    // これだと順番無視になってしまう..
+    var res = 0
+
     A.foreach(x => {
-      if (x > max) max = x
-      if (x < min) min = x
+      if (x > max) {
+        max = x
+        if (res < max - min) res = max - min
+      }
+      if (x < min) {
+        min = x
+        max = 0
+      }
     })
 
-    max - min
+    res
   }
 }
