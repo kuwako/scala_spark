@@ -1,7 +1,9 @@
 package codility
 
 /*
-A non-empty zero-indexed array A consisting of N integers is given. A pair of integers (P, Q), such that 0 ≤ P ≤ Q < N, is called a slice of array A. The sum of a slice (P, Q) is the total of A[P] + A[P+1] + ... + A[Q].
+A non-empty zero-indexed array A consisting of N integers is given.
+A pair of integers (P, Q), such that 0 ≤ P ≤ Q < N, is called a slice of array A.
+The sum of a slice (P, Q) is the total of A[P] + A[P+1] + ... + A[Q].
 
 Write a function:
 
@@ -41,6 +43,7 @@ object MaxSliceSum {
   }
 
   def solution(A: Array[Int]): Int = {
+    // 
     0
   }
 }
