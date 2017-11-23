@@ -1,5 +1,7 @@
 package codility
 
+import scala.annotation.tailrec
+
 /*
 A non-empty zero-indexed array A consisting of N integers is given.
 A pair of integers (P, Q), such that 0 ≤ P ≤ Q < N, is called a slice of array A.
@@ -42,8 +44,19 @@ object MaxSliceSum {
     )
   }
 
+  // score 100
   def solution(A: Array[Int]): Int = {
-    // 
-    0
+    // （p, q) p =< qでa[p] + a[p+1] + ... + a[q]の最大を求める
+    @tailrec
+    def s(A: Array[Int], ind: Int, maxSlice: Int, max: Int): Int = {
+      if (ind >= A.length) {
+        max
+      } else {
+        val slice = math.max(A(ind), maxSlice + A(ind))
+        s(A, ind + 1, slice, math.max(max, slice))
+      }
+    }
+
+    s(A, 1, A(0), A(0))
   }
 }
