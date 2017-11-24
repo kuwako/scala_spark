@@ -53,7 +53,7 @@ Elements of input arrays can be modified.
  */
 
 // score
-object MaxSliceSum {
+object MaxDoubleSliceSum {
   def main(args: Array[String]) = {
     println(
       solution(
@@ -63,6 +63,7 @@ object MaxSliceSum {
   }
 
   def solution(A: Array[Int]): Int = {
+    // TODO x < y < z で　A[x + 1] ... A[y - 1] + A[y + 1] + ... + A[z - 1] の最大値を求める
     0
   }
 
