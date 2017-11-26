@@ -63,8 +63,35 @@ object MaxDoubleSliceSum {
   }
 
   def solution(A: Array[Int]): Int = {
-    // TODO x < y < z で　A[x + 1] ... A[y - 1] + A[y + 1] + ... + A[z - 1] の最大値を求める
-    0
+    // x < y < z で　A[x + 1] ... A[y - 1] + A[y + 1] + ... + A[z - 1] の最大値を求める
+    val N = A.size
+    if (N < 3) return 0
+
+    val maxEndingL = Array.ofDim[Int](N)
+    val maxEndingR = Array.ofDim[Int](N)
+
+    // 左側から計算した時のmaxSliceを記録
+    for (x <- 1 until N - 1) {
+      val tmp = maxEndingL(x - 1) + A(x)
+      if (tmp < 0) maxEndingL(x) = 0
+      else maxEndingL(x) = tmp
+    }
+
+    // 右側から計算した時のmaxSliceを記録
+    for (z <- N - 2 until 1 by -1) {
+      val tmp = maxEndingR(z + 1) + A(z)
+      if (tmp < 0) maxEndingR(z) = 0
+      else maxEndingR(z) = tmp
+    }
+
+    // maxが最大となるyの位置を特定
+    var max = 0
+    for (y <- 1 until N - 1) {
+      var tmp = maxEndingL(y - 1) + maxEndingR(y + 1)
+      if (max < tmp) max = tmp
+    }
+
+    max
   }
 
 }
