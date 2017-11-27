@@ -67,8 +67,10 @@ object MaxDoubleSliceSum {
     // x < y < z で　A[x + 1] ... A[y - 1] + A[y + 1] + ... + A[z - 1] の最大値を求める
     val N = A.size
     if (N < 3) return 0
-
+    
+    // 左側からのmax sliceを格納  
     val maxEndingL = Array.ofDim[Int](N)
+    // 右側からのmax sliceを格納
     val maxEndingR = Array.ofDim[Int](N)
 
     // 左側から計算した時のmaxSliceを記録
