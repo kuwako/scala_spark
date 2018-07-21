@@ -102,3 +102,18 @@ sparkでは平均して2,3時間ごとに新しいJIRAやpull requestが作成�
 - 1つの変更でビッグバンのような変更を行うこと
 
 ## コード変更によるContribute
+投稿したコードは全てApache/Sparkのオープンラインセンスの元に置かれるのでよろしくね  
+最新のコードはここからcloneしてね
+```
+# Master development branch
+git clone git://github.com/apache/spark.git
+```
+
+### JIRA
+一般に、SparkはJIRAを使用してバグや改善などの論理的な問題を追跡し、Githubのプルリクエストを使用して特定のコード変更のレビューとマージを管理します  
+つまり、JIRAは何を修正または変更するべきかを記述するために使用され、高水準のアプローチやpull requestでは、その変更をプロジェクトのソースコードに実装する方法が記述されています  
+たとえば、主要な設計上の決定はJIRAで議論されています
+
+1. 変更の関係する既存のJIRAを検索してください
+  1. 既存のJIRAで議論されているissueに対して、新しいJIRAを作成しないでください
+  1. 既存のpull requestと重複しないように、JIRAに紐付けられているpull requestを確認してください
