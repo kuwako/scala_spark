@@ -179,3 +179,28 @@ git clone git://github.com/apache/spark.git
 - PRがJIRAを解決する正しい方法ではないと判断されたためにクローズされた場合は、JIRAを開いたままにしておきます。しかし、JIRAで特定された問題がPRによって解決されないことが明らかになった場合（問題ではなく、修正の必要がない場合）、JIRAも閉じられます。
 
 ### CodeStyleGuide
+
+
+#### Import
+常に相対パスではなく、絶対パスで記します。更に、アルファベット順にソートします。
+
+#### Infix Method
+演算子でないメソッドには中置記法を使用しないでください  
+- map funcと使用するのではなくlist.map(func)  
+- string contains "foo"ではなく、string.contains("foo")
+
+としてください。これは、他の言語の開発者に親しみやすくするためです。
+
+#### カリーブレース
+```scala
+// Correct:
+if (true) {
+  println("Wow!")
+}
+
+// Correct:
+if (true) statement1 else statement2
+
+// Wrong:
+if (true)
+  println("Wow!")```
