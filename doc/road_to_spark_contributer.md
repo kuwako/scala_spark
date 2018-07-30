@@ -178,4 +178,50 @@ git clone git://github.com/apache/spark.git
 - もし、レビューされたのに数週間取り込まれなければ、最も関連性の高い査読者からのレビューを求めた後、または中立的な反応を経験した場合、その結果は「soft no」とみなされている可能性がある。この場合、PRを取り消すのが良さそうです。
 - PRがJIRAを解決する正しい方法ではないと判断されたためにクローズされた場合は、JIRAを開いたままにしておきます。しかし、JIRAで特定された問題がPRによって解決されないことが明らかになった場合（問題ではなく、修正の必要がない場合）、JIRAも閉じられます。
 
-### CodeStyleGuide
+## CodeStyleGuide
+既存のコードのスタイルを守ってください
+- PythonにおいてはApache Sparkは1つの例外を除いてPEP8に準拠しています。(例外: １行100文字で、79ではない)
+- RにおいてはApache SparkはGoogle's R Style Guideに従います。例外は3つです。１行は100文字です。80文字ではありません。関数名に制限はありませんが、キャメルケースです。S4オブジェクト/メソッドが許可されています。
+- Javaコードに関してはApache Spark はOracle’s Java code conventionsに従います。多くのScalaガイドラインにJavaも従います
+- Scalaに関してはApache SparkはオフィシャルのScala style guideに従います。しかし、以下の変更に追従します。
+
+### Line Length
+1行の最長は100文字です。唯一の例外はimport文です（ただし、それでも100文字以下にできるならしてください)
+
+### インデント
+2spaceインデントを使ってください。関数宣言の場合、変数が1行に収まらない場合のみ4spaceインデントを用いてください
+
+### コードドキュメントスタイル
+クラス、オブジェクト、メソッドの前にJava Docs Styleで書き込んでください
+```Scala
+/** This is a correct one-liner, short description. */
+
+/**
+ * This is correct multi-line JavaDoc comment. And
+ * this is my second line, and if I keep typing, this would be
+ * my third line.
+ */
+
+/** In Spark, we don't use the ScalaDoc style so this
+  * is not correct.
+  */
+```
+インラインコメントでは//を使用します
+
+```scala
+// This is a short, single line comment
+
+// This is a multi line comment.
+// Bla bla bla
+
+/*
+ * Do not use this style for multi line comments. This
+ * style of comment interferes with commenting out
+ * blocks of code, and also makes code comments harder
+ * to distinguish from Scala doc / Java doc comments.
+ */
+
+/**
+ * Do not use scala doc style for inline comments.
+ */
+```
