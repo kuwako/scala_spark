@@ -225,3 +225,59 @@ git clone git://github.com/apache/spark.git
  * Do not use scala doc style for inline comments.
  */
 ```
+
+### Import
+常に相対パスではなく、絶対パスで記します。更に、アルファベット順にソートします。
+
+### Infix Method
+演算子でないメソッドには中置記法を使用しないでください  
+- map funcと使用するのではなくlist.map(func)  
+- string contains "foo"ではなく、string.contains("foo")
+
+としてください。これは、他の言語の開発者に親しみやすくするためです。
+
+### カリーブレース
+```scala
+// Correct:
+if (true) {
+  println("Wow!")
+}
+
+// Correct:
+if (true) statement1 else statement2
+
+// Wrong:
+if (true)
+  println("Wow!")
+```
+
+### Return Type
+常に返り値の型を明治する必要があります。もし返り値がない場合、Unitを宣言してください。  
+通常の変数の宣言の場合は型を明示する必要はありません。
+```scala
+// Correct:
+def getSize(partitionId: String): Long = { ... }
+def compute(partitionId: String): Unit = { ... }
+
+// Wrong:
+def getSize(partitionId: String) = { ... }
+def compute(partitionId: String) = { ... }
+def compute(partitionId: String) { ... }
+
+// Correct:
+val name = "black-sheep"
+val path: Option[String] =
+  try {
+    Option(names)
+      .map { ns => ns.split(",") }
+      .flatMap { ns => ns.filter(_.nonEmpty).headOption }
+      .map { n => "prefix" + n + "suffix" }
+      .flatMap { n => if (n.hashCode % 3 == 0) Some(n + n) else None }
+  } catch {
+    case e: SomeSpecialException =>
+      computePath(names)
+  }
+```
+
+### もし自信がなければ
+あなたが何かのために適切なスタイルについてわからない場合は、既存のコードベースのスタイルに従ってください。あなたの機能を使用するコードに他の例があるかどうかを見てください。dev@spark.apache.orgリストでもお気軽にお問い合わせください。
