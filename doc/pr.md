@@ -7,3 +7,7 @@
 - SPARK-24954
   - core/src/main/scala/org/apache/spark/scheduler/DAGScheduler.scala
   - チェック関数入れてるだけ？
+
+# RDDによるシャッフル + リパーティションが間違った答えを出す
+- Shuffle+Repartition on an RDD could lead to incorrect answers
+- 
