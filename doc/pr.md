@@ -1,3 +1,5 @@
+https://spark-prs.appspot.com/
+
 # Streaming queryで毎回同じuuidが発行されているらしい
 - Uuid expression should produce different values in each execution under streaming query
   - https://issues.apache.org/jira/browse/SPARK-24896
@@ -9,5 +11,10 @@
   - チェック関数入れてるだけ？
 
 # RDDによるシャッフル + リパーティションが間違った答えを出す
-- Shuffle+Repartition on an RDD could lead to incorrect answers
-- 
+- SPARK-23243
+  - Shuffle+Repartition on an RDD could lead to incorrect answers
+
+# distribute by を複数のカラムで使うと、javaのcodeGeneratorの問題にあたる
+- "distribute by" on multiple columns (wrap in brackets) may lead to codegen issue
+- https://github.com/apache/spark/pull/22066/files
+  - どうやら値の上書きがされずにループされてる？
