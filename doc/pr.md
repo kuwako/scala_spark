@@ -18,3 +18,12 @@ https://spark-prs.appspot.com/
 - "distribute by" on multiple columns (wrap in brackets) may lead to codegen issue
 - https://github.com/apache/spark/pull/22066/files
   - どうやら値の上書きがされずにループされてる？
+
+# 開放したメモリ領域へのアクセスをしている箇所があったので確保し直す処理の追加
+- [SPARK-25081][Core]Nested spill in ShuffleExternalSorter should not access released memory page (branch-2.2)
+- https://github.com/apache/spark/pull/22072/files
+
+# Hiveのパーティションが適切でなくなるパターンがある
+- [SPARK-14172][SQL] Hive table partition predicate not passed down correctly
+- https://github.com/apache/spark/pull/13893
+  - 動的なパーティションの区切りの場合
