@@ -27,3 +27,7 @@ https://spark-prs.appspot.com/
 - [SPARK-14172][SQL] Hive table partition predicate not passed down correctly
 - https://github.com/apache/spark/pull/13893
   - 動的なパーティションの区切りの場合
+
+# kafkaのキャッシュがタスクが終わる前にクローズしてしまう問題の解決
+- [SPARK-21869][SS] A cached Kafka producer should not be closed if any task is using it - adds inuse tracking.
+- https://github.com/apache/spark/pull/19096/files
