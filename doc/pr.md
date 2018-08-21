@@ -13,6 +13,9 @@ https://spark-prs.appspot.com/
 # RDDによるシャッフル + リパーティションが間違った答えを出す
 - SPARK-23243
   - Shuffle+Repartition on an RDD could lead to incorrect answers
+  - taskが失敗した場合はtaskのやり直しでいいけど、fetchが失敗した場合にランダムにrepartitionしてると取れるものが違うらしく、結果が変わるっぽい
+    - 解決策として、ソートする方法があるが重い
+    - idを振ってどのパーティションに区切るかを決めるPRが優勢のようだが、まだ解決には至っていない
 
 # distribute by を複数のカラムで使うと、javaのcodeGeneratorの問題にあたる
 - "distribute by" on multiple columns (wrap in brackets) may lead to codegen issue
