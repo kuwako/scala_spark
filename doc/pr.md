@@ -34,3 +34,11 @@ https://spark-prs.appspot.com/
 # kafkaのキャッシュがタスクが終わる前にクローズしてしまう問題の解決
 - [SPARK-21869][SS] A cached Kafka producer should not be closed if any task is using it - adds inuse tracking.
 - https://github.com/apache/spark/pull/19096/files
+
+# SSのアプリで、実行中にこけてリスタートかかったときにoffsetの値が初期値に戻ってしまう対策
+- [SPARK-24462][SS] Initialize the offsets correctly when restarting a query with saved state
+- コミッタ的には、リスタートしたときにoffset変わるの変じゃね？と言っていて、コケたらExceptionを投げる方のPRを進めようとしている
+
+# カラムナファイルのパーティションの最適化
+- [SPARK-24906][SQL] Adaptively enlarge split / partition size for Parq… #21868
+- ちょっと内容がよくわからないのでもう少し読み込む
