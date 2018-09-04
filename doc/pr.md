@@ -41,4 +41,6 @@ https://spark-prs.appspot.com/
 
 # カラムナファイルのパーティションの最適化
 - [SPARK-24906][SQL] Adaptively enlarge split / partition size for Parq… #21868
-- ちょっと内容がよくわからないのでもう少し読み込む
+- カラムナ型のデータ読み込み時に、かなりのムダがある
+- パーティションサイズを動的に変更することで高速化を図れる
+
