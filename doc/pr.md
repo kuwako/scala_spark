@@ -44,3 +44,6 @@ https://spark-prs.appspot.com/
 - カラムナ型のデータ読み込み時に、かなりのムダがある
 - パーティションサイズを動的に変更することで高速化を図れる
 
+# 重複のあるjoinの際に右側の条件を自動で変更するが、その際にreferenceの変更を忘れている問題の解決
+- [SPARK-25150][SQL] Rewrite condition when deduplicate Join #22318
+- 
