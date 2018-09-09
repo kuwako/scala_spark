@@ -9,3 +9,5 @@ codilityも解いてます。
 [完了] sparkのコントリビュータになる目標立てたので、メモを追加中
 
 [DOING] sparkのPRを読んでます
+
+[DOING] spark開発し始めに必要なことメモ&実践中
