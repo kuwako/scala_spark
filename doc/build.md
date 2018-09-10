@@ -9,3 +9,4 @@
 ## とりあえずDeveloper Toolsにあるコマンド叩いてみる 
 - build/sbt clean package
     - すごい量のなにかをDLしている.....
+    - 一時間以上かかったけど動いた
