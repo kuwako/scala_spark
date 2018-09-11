@@ -14,3 +14,9 @@
 ## compileできた
 - build/sbt compile
 - Assembly JARを再生成せずにビルドするには export SPARK_PREPEND_CLASSES=trueを環境変数に追加する必要がある
+
+## コマンドの起点どこ？
+- こいつっぽい?
+    - spark/launcher/src/main/java/org/apache/spark/launcher/Main.java
+        - この中で条件分岐してやってるっぽい
+        - spark/core/src/main/scala/org/apache/spark/deploy/SparkSubmit.scala
