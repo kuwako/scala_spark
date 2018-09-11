@@ -10,3 +10,7 @@
 - build/sbt clean package
     - すごい量のなにかをDLしている.....
     - 一時間以上かかったけど動いた
+
+## compileできた
+- build/sbt compile
+- Assembly JARを再生成せずにビルドするには export SPARK_PREPEND_CLASSES=trueを環境変数に追加する必要がある
