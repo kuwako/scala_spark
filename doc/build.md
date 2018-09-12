@@ -20,3 +20,7 @@
     - spark/launcher/src/main/java/org/apache/spark/launcher/Main.java
         - この中で条件分岐してやってるっぽい
         - spark/core/src/main/scala/org/apache/spark/deploy/SparkSubmit.scala
+
+## spark-submitコマンドのオプション思い出す
+- https://www.task-notes.com/entry/20160103/1451810637
+- http://www.ne.jp/asahi/hishidama/home/tech/scala/spark/submit.html
