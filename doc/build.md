@@ -20,6 +20,11 @@
     - spark/launcher/src/main/java/org/apache/spark/launcher/Main.java
         - この中で条件分岐してやってるっぽい
         - spark/core/src/main/scala/org/apache/spark/deploy/SparkSubmit.scala
+        - でもなんかpythonとSparkShellの実行への分岐しかない...?
+        - scala側でextends Appとかdef mainしてるところないのでやっぱり正しいかも
+        - コマンドをパースし終えたらbashCommandBuilderになんか突っ込んでやってる
+        - ただ、それをsystem.out.print()してるだけ...?
+        - これで実行できるのかな...調べる
 
 ## spark-submitコマンドのオプション思い出す
 - https://www.task-notes.com/entry/20160103/1451810637
