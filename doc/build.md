@@ -25,6 +25,7 @@
         - コマンドをパースし終えたらbashCommandBuilderになんか突っ込んでやってる
         - ただ、それをsystem.out.print()してるだけ...?
         - これで実行できるのかな...調べる
+        - spark-classの実行内容だった
 
 ## spark-submitコマンドのオプション思い出す
 - https://www.task-notes.com/entry/20160103/1451810637
