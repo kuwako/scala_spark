@@ -30,3 +30,7 @@
 ## spark-submitコマンドのオプション思い出す
 - https://www.task-notes.com/entry/20160103/1451810637
 - http://www.ne.jp/asahi/hishidama/home/tech/scala/spark/submit.html
+
+## apache.spark.internal.Logging
+- なんかSparkSubmitとかで継承されててただのLoggingなのか気になったので調べる
+    - 本当にLog関連のことしかやってない
