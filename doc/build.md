@@ -34,3 +34,14 @@
 ## apache.spark.internal.Logging
 - なんかSparkSubmitとかで継承されててただのLoggingなのか気になったので調べる
     - 本当にLog関連のことしかやってない
+
+## spark-submit
+- spark/core/src/main/scala/org/apache/spark/deploy/SparkSubmit.scala の submitがメインっぽい
+
+## prepareSubmitEnvironment
+- supark-submit時に叩かれる
+- @return a 4-tuple:
+    - (1) the arguments for the child process,
+    - (2) a list of classpath entries for the child,
+    - (3) a map of system properties, and
+    - (4) the main class for the child
