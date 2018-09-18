@@ -45,3 +45,7 @@
     - (2) a list of classpath entries for the child,
     - (3) a map of system properties, and
     - (4) the main class for the child
+- Keytab...?
+    - yarn/local/mesosClientのときにkeytabが有効かどうかの確認が入っている
+    - HiveMetastoreを使う際に必要らしい
+- 実行モード(yarnとかlocalとか)ですごいたくさん分岐あって追いきれないけどyarnが一番分岐してやることが多い?
