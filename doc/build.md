@@ -51,3 +51,10 @@
 - 実行モード(yarnとかlocalとか)ですごいたくさん分岐あって追いきれないけどyarnが一番分岐してやることが多い?
 - 読み終わった
     - 分岐多すぎてグシャグシャ過ぎたのでリファクタリングできそう感あった
+
+## doRunMain
+- proxyUser
+    - UserGroupInformation.createProxyUser(args.proxyUser,UserGroupInformation.getCurrentUser())
+    - ってあるけど、そもそもソース上検索してもそんなオブジェクトもメソッドもなくてわからん...
+- メソッドの説明に下記のようにあるけど、意味がよくわからない...
+    - このメインクラスは、クラスターデプロイメントモードまたはPythonアプリケーションを実行している場合、ユーザーが提供するものではありません。
