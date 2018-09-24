@@ -63,3 +63,6 @@
         - https://qiita.com/neko_the_shadow/items/bbca2c6387cf25de251e
 - 次はサンプルソースを見てメソッドの行方を追う
 
+## SparkApplication start()
+- 標準のJavaクラスを「メイン」メソッドでラップするSparkApplicationの実装。
+- 設定はシステムプロパティを介してアプリケーションに伝播されるため、同じJVM内でこれらの複数を実行すると、設定漏れのために未定義の動作につながる可能性がある
