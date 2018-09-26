@@ -69,3 +69,9 @@
 
 # SparkSession
 - 次はこいつ見ていく
+
+## builder
+- getOrCreate
+    - 既存のものがあればそれを返す
+    - なければ作成し、Global defaultとして設定する
+        - 中でSparkContextをgetOrCreateしてnewしている
