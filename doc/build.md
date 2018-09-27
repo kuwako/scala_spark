@@ -75,3 +75,7 @@
     - 既存のものがあればそれを返す
     - なければ作成し、Global defaultとして設定する
         - 中でSparkContextをgetOrCreateしてnewしている
+
+## sparkContext
+- RDD作ったり、accumulatorsを作ったり、クラスタにbroadcastしたりしてる
+- fileのロードとかもこの辺で実装されてる
