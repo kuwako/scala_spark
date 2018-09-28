@@ -79,3 +79,5 @@
 ## sparkContext
 - RDD作ったり、accumulatorsを作ったり、クラスタにbroadcastしたりしてる
 - fileのロードとかもこの辺で実装されてる
+
+## dataframeの実体がない...?
