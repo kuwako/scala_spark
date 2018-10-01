@@ -114,3 +114,11 @@
 
 通常、データセットを作成するには2つの方法があります。  
 最も一般的な方法は、SparkをSparkSessionで利用できる `read`機能を使って、ストレージシステム上のいくつかのファイルに向けてSparkを指すことです。  
+
+## sql
+### sessionState.sqlParser.parsePlan(sqlText)
+- こいつでsql文をパースしてsqlライクの処理を実行可能にしている
+-  A class that holds all session-specific state in a given [[SparkSession]].
+    - @param sqlParser Parser that extracts expressions, plans, table identifiers etc. from SQL texts.
+- parseの実体はSparkSessionExtensionSuiteのparseっぽい..?
+    - 中でSqlBaseParser使ってる
