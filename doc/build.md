@@ -122,3 +122,4 @@
     - @param sqlParser Parser that extracts expressions, plans, table identifiers etc. from SQL texts.
 - parseの実体はSparkSessionExtensionSuiteのparseっぽい..?
     - 中でSqlBaseParser使ってる
+- AbstractSqlParserのparseに実体っぽい
