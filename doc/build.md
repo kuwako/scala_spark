@@ -123,3 +123,6 @@
 - parseの実体はSparkSessionExtensionSuiteのparseっぽい..?
     - 中でSqlBaseParser使ってる
 - AbstractSqlParserのparseに実体っぽい
+
+## mapValues
+- KeyValueGroupedDatasetのmapValueを追い中
