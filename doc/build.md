@@ -126,3 +126,9 @@
 
 ## mapValues
 - KeyValueGroupedDatasetのmapValueを追い中
+
+## ロジカルプランってどうやって作ってる...?
+- QueryExcutionクラスでanalyzeしてる...?
+- 実行はあとのタイミングでまとめてやってるっぽい
+    - RuleExecutorのexecuteに渡ってる
+
