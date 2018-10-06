@@ -127,8 +127,12 @@
 ## mapValues
 - KeyValueGroupedDatasetのmapValueを追い中
 
-## ロジカルプランってどうやって作ってる...?
+### ロジカルプランってどうやって作ってる...?
 - QueryExcutionクラスでanalyzeしてる...?
 - 実行はあとのタイミングでまとめてやってるっぽい
     - RuleExecutorのexecuteに渡ってる
 
+## 通常のdatasetのmap
+- withTypedPlanが使われている
+- Object.scala MapElementでロジカルプランを決定してる
+- CatalystSerdeでdeserializeされて、後ろでserializeして返している
