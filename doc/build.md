@@ -136,3 +136,4 @@
 - withTypedPlanが使われている
 - Object.scala MapElementでロジカルプランを決定してる
 - CatalystSerdeでdeserializeされて、後ろでserializeして返している
+    - UnaryNodeというロジカルプランを拡張したオブジェクトに値を渡している
