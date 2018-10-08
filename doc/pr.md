@@ -47,3 +47,6 @@ https://spark-prs.appspot.com/
 # 重複のあるjoinの際に右側の条件を自動で変更するが、その際にreferenceの変更を忘れている問題の解決
 - [SPARK-25150][SQL] Rewrite condition when deduplicate Join #22318
 - 
+
+# UDTを使用する際に必要だった実装クラスなどを簡略化する
+- [SPARK-7768][SQL] Revise user defined types (UDT)
