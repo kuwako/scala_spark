@@ -50,3 +50,6 @@ https://spark-prs.appspot.com/
 
 # UDTを使用する際に必要だった実装クラスなどを簡略化する
 - [SPARK-7768][SQL] Revise user defined types (UDT)
+
+# セッションとセッションの間隔によってwindow関数の結果にばらつきが出ていて、ユーザーごとにその問題に対応していることの対応
+- [SPARK-10816][SS] SessionWindow support for Structure Streaming #22583
