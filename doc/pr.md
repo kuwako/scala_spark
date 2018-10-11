@@ -53,3 +53,7 @@ https://spark-prs.appspot.com/
 
 # セッションとセッションの間隔によってwindow関数の結果にばらつきが出ていて、ユーザーごとにその問題に対応していることの対応
 - [SPARK-10816][SS] SessionWindow support for Structure Streaming #22583
+
+# [SPARK-25697][CORE]When zstd compression enabled, InProgress application is throwing Error in the history webui 
+- zstdで圧縮する場合にアプリケーション実行中にはログが見れない。これはzstdの仕様なので、Exceptionを履くのではなく、ログを残すように変更
+- https://github.com/apache/spark/pull/22689
