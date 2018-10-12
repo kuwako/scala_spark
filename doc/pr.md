@@ -57,3 +57,9 @@ https://spark-prs.appspot.com/
 # [SPARK-25697][CORE]When zstd compression enabled, InProgress application is throwing Error in the history webui 
 - zstdで圧縮する場合にアプリケーション実行中にはログが見れない。これはzstdの仕様なので、Exceptionを履くのではなく、ログを残すように変更
 - https://github.com/apache/spark/pull/22689
+
+# [SPARK-25560][SQL] Allow FunctionInjection in SparkExtensions 
+- SparkExtentionsにFunctionInjectionできるようにする
+    - injectParserとか
+    - injectResolutionRuleとかがある
+- https://github.com/apache/spark/pull/22576
