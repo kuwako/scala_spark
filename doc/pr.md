@@ -63,3 +63,7 @@ https://spark-prs.appspot.com/
     - injectParserとか
     - injectResolutionRuleとかがある
 - https://github.com/apache/spark/pull/22576
+
+# [SPARK-25353][SQL] executeTake in SparkPlan is modified to avoid unnecessary decoding. 
+- SparkPlanでlimitを使った際に不要なrddのdecodeが走るのをやめさせる。処理速度の向上もする。
+- https://github.com/apache/spark/pull/22347
