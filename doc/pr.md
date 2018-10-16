@@ -67,3 +67,61 @@ https://spark-prs.appspot.com/
 # [SPARK-25353][SQL] executeTake in SparkPlan is modified to avoid unnecessary decoding. 
 - SparkPlanでlimitを使った際に不要なrddのdecodeが走るのをやめさせる。処理速度の向上もする。
 - https://github.com/apache/spark/pull/22347
+
+# [SPARK-25196][SQL] Extends Analyze commands for cached tables
+- analyzeコマンドがキャッシュされたテーブルも計算対象に入れられるように変更がされている
+- https://github.com/apache/spark/pull/22204
+- analyzeコマンドの説明
+    - https://docs.databricks.com/spark/latest/spark-sql/language-manual/analyze-table.html
+    - ANALYZE TABLE [db_name.]table_name COMPUTE STATISTICS [analyze_option]
+    - ANALYZE TABLE [db_name.]table_name COMPUTE STATISTICS FOR COLUMNS col1 [, col2, ...]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a
