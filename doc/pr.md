@@ -76,6 +76,12 @@ https://spark-prs.appspot.com/
     - ANALYZE TABLE [db_name.]table_name COMPUTE STATISTICS [analyze_option]
     - ANALYZE TABLE [db_name.]table_name COMPUTE STATISTICS FOR COLUMNS col1 [, col2, ...]
 
+# [SPARK-25269][SQL] SQL interface support specify StorageLevel when cache table
+- キャッシュテーブルへのアクセスのオプションでstorageLevelを指定できるようにする
+
+# [SPARK-25332][SQL] Instead of broadcast hash join ,Sort merge join has selected when restart spark-shell/spark-JDBC for hive provider
+- インサートが実行された際にstatsが更新されないせいで、統計情報が正確ではなくなり、hash joinがベストなのにかかわらず、マージジョインが選択される
+- 再計算の際に正確な統計情報を取得するように変更されている
 
 
 
