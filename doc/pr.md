@@ -83,7 +83,8 @@ https://spark-prs.appspot.com/
 - インサートが実行された際にstatsが更新されないせいで、統計情報が正確ではなくなり、hash joinがベストなのにかかわらず、マージジョインが選択される
 - 再計算の際に正確な統計情報を取得するように変更されている
 
-
+# [SPARK-25740][SQL] Refactor DetermineTableStats to invalidate cache when some configuration changed
+- cacheのせいで適切なjoinが選ばれないため、fallBackToHdfsとdefaultSizeInBytesの設定が変更された場合にキャッシュを無効にする
 
 
 
