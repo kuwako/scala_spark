@@ -86,7 +86,11 @@ https://spark-prs.appspot.com/
 # [SPARK-25740][SQL] Refactor DetermineTableStats to invalidate cache when some configuration changed
 - cacheのせいで適切なjoinが選ばれないため、fallBackToHdfsとdefaultSizeInBytesの設定が変更された場合にキャッシュを無効にする
 
+# [SPARK-25098][SQL]‘Cast’ will return NULL when input string starts/en… #22089
+- 普通CAST('hoge')の先頭や末尾にスペースが入っているとnullを返すが、hiveではOKが変えるため、挙動をtrimを使い合わせた
 
+# [SPARK-25277][YARN] YARN applicationMaster metrics should not register static metrics #22279
+- startというメソッドと完全に同じソースを使用するが、静的なソースとしてJVMに扱われないようにするために追加している(?)
 
 
 
