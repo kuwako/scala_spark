@@ -92,6 +92,27 @@ https://spark-prs.appspot.com/
 # [SPARK-25277][YARN] YARN applicationMaster metrics should not register static metrics #22279
 - startというメソッドと完全に同じソースを使用するが、静的なソースとしてJVMに扱われないようにするために追加している(?)
 
+# [SPARK-25806][SQL]The instance of FileSplit is redundant for ParquetFileFormat
+- Parquetは縦分割でFileSplitの必要がないので削除している
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
