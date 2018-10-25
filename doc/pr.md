@@ -95,7 +95,8 @@ https://spark-prs.appspot.com/
 # [SPARK-25806][SQL]The instance of FileSplit is redundant for ParquetFileFormat
 - Parquetは縦分割でFileSplitの必要がないので削除している
 
-
+# [SPARK-25678] Requesting feedback regarding a prototype for adding PBS Professional as a cluster manager #22822
+- PBS professionalという有名なバッチ実行管理システムがあり、現状sparkはそれに対応していないので、クラスタをSparkクラスタとPBSクラスタに分割する必要があるので、その統合をしようとしている
 
 
 
