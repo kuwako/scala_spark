@@ -98,6 +98,13 @@ https://spark-prs.appspot.com/
 # [SPARK-25678] Requesting feedback regarding a prototype for adding PBS Professional as a cluster manager #22822
 - PBS professionalという有名なバッチ実行管理システムがあり、現状sparkはそれに対応していないので、クラスタをSparkクラスタとPBSクラスタに分割する必要があるので、その統合をしようとしている
 
+# [SPARK-19465][SQL] Added options for custom boolean values in CSV
+- CSVファイルでのBoolean値のサポート
+- コミッタは必要かどうか疑問のようだが、CSV ImportやExport時に便利なのではという議論
+
+# [SPARK-25842][SQL] Deprecate rangeBetween APIs introduced in SPARK-21608 #22841
+- 2.3で追加された関数が同様以上の役割を果たしているので、不要ということになり、rangeBetweenをdeprecatedに指定
+
 
 
 
