@@ -8,6 +8,6 @@ codilityも解いてます。
 
 [DONE] sparkのコントリビュータになる目標立てたので、メモを追加中
 
-[DOING] sparkのPRを読んでます
+[DONE] sparkのPRを読んでます
 
-[DOING] spark開発し始めに必要なことメモ&実践中
+[DONE] spark開発し始めに必要なことメモ&実践中
