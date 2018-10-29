@@ -105,6 +105,8 @@ https://spark-prs.appspot.com/
 # [SPARK-25842][SQL] Deprecate rangeBetween APIs introduced in SPARK-21608 #22841
 - 2.3で追加された関数が同様以上の役割を果たしているので、不要ということになり、rangeBetweenをdeprecatedに指定
 
+# [SPARK-24958] Add executors' process tree total memory information to heartbeat signals. #22612
+- エグゼキュータのプロセスツリー全体のメモリ情報を取得できるようにし、ドライバノードでピーク計算できるようにする 
 
 
 
@@ -153,15 +155,3 @@ https://spark-prs.appspot.com/
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-a
