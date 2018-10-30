@@ -108,7 +108,10 @@ https://spark-prs.appspot.com/
 # [SPARK-24958] Add executors' process tree total memory information to heartbeat signals. #22612
 - エグゼキュータのプロセスツリー全体のメモリ情報を取得できるようにし、ドライバノードでピーク計算できるようにする 
 
-
+# [SPARK-25789][SQL] Support for Dataset of Avro #22878
+- Avroの型のエンコーダクラスや型のインターフェースの提供
+    - Avro: AVROとはApacheプロジェクトのひとつとして開発されているデータ交換形式
+        - コンパクトなバイナリで高速なシリアライズ・デシリアライズが行えるため、サーバーログなどに利用されているらしい
 
 
 
