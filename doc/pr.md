@@ -113,6 +113,14 @@ https://spark-prs.appspot.com/
     - Avro: AVROとはApacheプロジェクトのひとつとして開発されているデータ交換形式
         - コンパクトなバイナリで高速なシリアライズ・デシリアライズが行えるため、サーバーログなどに利用されているらしい
 
+# [SPARK-25850][SQL] Make the split threshold for the code generated function configurable #22847
+- 生成されたJava関数のソースコードがspark.sql.codegen.methodSplitThresholdを超えると、複数の小さな関数に分割される
+    - thresholdは分割されるcodegenによる単一のJava関数によるソースコード長のしきい値 
+        - 生成されたJava関数のソースコードがこのしきい値を超えると、複数の小さな関数に分割される 
+        - 生成されるバイトコードの数はわからないので、コード長をメトリックとして使用する 
+        - HotSpotで実行しているときは、8KBを超えられない。さもなければ、それはJITされない
+            - HotSpot: HotSpot（ホットスポット）はオラクル（サン・マイクロシステムズ）が提供しているJava仮想マシンで使われている高速化のための技術
+
 
 
 
