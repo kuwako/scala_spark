@@ -121,6 +121,21 @@ https://spark-prs.appspot.com/
         - HotSpotで実行しているときは、8KBを超えられない。さもなければ、それはJITされない
             - HotSpot: HotSpot（ホットスポット）はオラクル（サン・マイクロシステムズ）が提供しているJava仮想マシンで使われている高速化のための技術
 
+# [WIP][SPARK-20628][CORE][K8S] Keep track of nodes (/ spot instances) which are going to be shutdown #19045
+- スケジュールされたタスクを防ぐためにシャットダウンするノードを追跡し続ける
+- スポットインスタンスを念頭に置いて設計されている
+- 各ベンダーは異なる方法で保留中の終了のインスタンスを通知するので、電源喪失によって作業者に作業停止を通知することもできる
+    - SIGPWR: 電源喪失
+
+
+
+
+
+
+
+
+
+
 
 
 
