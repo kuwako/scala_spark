@@ -127,6 +127,23 @@ https://spark-prs.appspot.com/
 - 各ベンダーは異なる方法で保留中の終了のインスタンスを通知するので、電源喪失によって作業者に作業停止を通知することもできる
     - SIGPWR: 電源喪失
 
+# [SPARK-25908][CORE][SQL] Remove old deprecated items in Spark 3 #22921
+- Spark3系で削除する関数の削除
+    - Remove some AccumulableInfo .apply() methods
+    - Remove non-label-specific multiclass precision/recall/fScore in favor of accuracy
+    - Remove toDegrees/toRadians in favor of degrees/radians
+    - Remove approxCountDistinct in favor of approx_count_distinct
+    - Remove unused Python StorageLevel constants
+    - Remove Dataset unionAll in favor of union
+    - Remove unused multiclass option in libsvm parsing
+    - Remove references to deprecated spark configs like spark.yarn.am.port
+    - Remove TaskContext.isRunningLocally
+    - Remove ShuffleMetrics.shuffle\* methods
+    - Remove BaseReadWrite.context in favor of session
+    - Remove Column.!== in favor of =!=
+    - Remove Dataset.explode
+    - Remove Dataset.registerTempTable
+    - Remove SQLContext.getOrCreate, setActive, clearActive, constructors
 
 
 
